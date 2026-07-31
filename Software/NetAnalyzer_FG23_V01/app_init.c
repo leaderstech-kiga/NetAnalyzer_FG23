@@ -1,0 +1,204 @@
+/***************************************************************************//**
+ * @file
+ * @brief app_init.c
+ *******************************************************************************
+ * # License
+ * <b>Copyright 2018 Silicon Laboratories Inc. www.silabs.com</b>
+ *******************************************************************************
+ *
+ * SPDX-License-Identifier: Zlib
+ *
+ * The licensor of this software is Silicon Laboratories Inc.
+ *
+ * This software is provided 'as-is', without any express or implied
+ * warranty. In no event will the authors be held liable for any damages
+ * arising from the use of this software.
+ *
+ * Permission is granted to anyone to use this software for any purpose,
+ * including commercial applications, and to alter it and redistribute it
+ * freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not
+ *    claim that you wrote the original software. If you use this software
+ *    in a product, an acknowledgment in the product documentation would be
+ *    appreciated but is not required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ *    misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ *
+ ******************************************************************************/
+
+// -----------------------------------------------------------------------------
+//                                   Includes
+// -----------------------------------------------------------------------------
+#include "em_cmu.h"
+#include "em_gpio.h"
+#include "sl_gpio.h"                        /* SL_GPIO_PORT_x (교차검증용) */
+
+#include "step_config.h"                    /* FS_N 스텝 가드 (JUDGMENT §3.12) */
+#include "board_cfg.h"                      /* TCXO/UART 핀 상수 + 근거 */
+#include "sl_iostream_eusart_vcom_config.h" /* 핀 교차검증용 (Studio 소유) */
+
+#if FS_N >= 1
+#include "app_log.h"                             /* ASCII 전용·길이 안전 로그 */
+#include "sl_sleeptimer.h"                       /* S3b 호출 반환시간 측정 */
+#endif
+
+#if FS_N >= 2
+#include "uart_frame.h"                          /* CRC-16/CCITT-FALSE */
+#endif
+
+// -----------------------------------------------------------------------------
+//                              Macros and Typedefs
+// -----------------------------------------------------------------------------
+
+/* ★Studio 설정 ↔ board_cfg.h 기대값 교차검증 (컴파일 타임).
+ *  근거: 2026-07-30 프로젝트 생성 시 Studio 가 보드 기본값(PA08/PA09)으로 만들었고,
+ *   파트 변경 시 config 헤더가 재생성되며 되돌아갈 수 있음을 실제로 겪었다.
+ *   → 조용히 어긋나는 대신 빌드를 깨서 알아채도록 한다. (추측보다 실측/명시) */
+/* ※ 포트는 sl_gpio 도메인(SL_GPIO_PORT_x)과 emlib 도메인(gpioPortx)의 열거값이
+ *   같다는 보장이 없으므로 섞어 비교하지 않는다. Studio 설정끼리(sl_gpio) 비교한다. */
+_Static_assert(SL_IOSTREAM_EUSART_VCOM_TX_PORT == SL_GPIO_PORT_B
+               && SL_IOSTREAM_EUSART_VCOM_TX_PIN == BOARD_UART_TX_PIN,
+               "UART TX 가 연결보드 V01(PB01)과 다름 - sl_iostream_eusart_vcom_config.h 확인");
+_Static_assert(SL_IOSTREAM_EUSART_VCOM_RX_PORT == SL_GPIO_PORT_B
+               && SL_IOSTREAM_EUSART_VCOM_RX_PIN == BOARD_UART_RX_PIN,
+               "UART RX 가 연결보드 V01(PB02)과 다름 - sl_iostream_eusart_vcom_config.h 확인");
+_Static_assert(SL_IOSTREAM_EUSART_VCOM_BAUDRATE == BOARD_UART_BAUDRATE,
+               "UART 보율이 115200(FG23_UART_인터페이스.md)과 다름");
+
+/* ★필수 초기화: TCXO_VCC (PC09) 를 main 이전에 ON.
+ *  근거: `프로젝트생성_V03_RAIL_가이드.md` §4, LTD_W10D_V03 `app_init.c` 검증 패턴.
+ *   부팅 시 RAIL init(sl_rail_util_init) 이 HFXO 39MHz 를 요구한다. A3125LT 모듈은
+ *   외부 TCXO(DSB211SDN)를 쓰고 그 VCC 는 MCU 의 PC09 로 게이팅된다.
+ *   TCXO 가 안 켜진 채로 RAIL init 에 진입하면 RAIL_ConfigChannels assert/hang → HardFault.
+ *   그래서 생성자(__attribute__((constructor)))로 main 이전에 켠다.
+ *
+ *  ★감지기와의 차이 (본 장비 = 비배터리 상시전원):
+ *   감지기는 EM2 진입 때 이 핀을 OFF 해 1.2µA 를 달성했지만, 본 장비는 게이팅하지
+ *   않고 **상시 ON** 으로 둔다. TCXO 재기동 settle(수 ms) 동안 수신을 놓치는 쪽이
+ *   전류보다 훨씬 비싸다. (작업지시 §2 "고성능")
+ *
+ *  ★V03 교훈 계승: 이 생성자를 스텝 가드(#if)로 감싸면 특정 스텝에서 TCXO 미기동 →
+ *   RAIL init 이상을 유발한다(V03 Step 4 회귀, 1.4mA). **조건 없이 항상 활성.** */
+__attribute__((constructor))
+static void rf_tcxo_power_early(void)
+{
+  CMU->CLKEN0_SET = CMU_CLKEN0_GPIO;        /* GPIO 버스클럭 enable */
+  GPIO_PinModeSet(BOARD_TCXO_VCC_PORT, BOARD_TCXO_VCC_PIN,
+                  gpioModePushPull, 1);     /* TCXO ON (PC09 HIGH) — 이후 끄지 않음 */
+  for (volatile uint32_t d = 0; d < BOARD_TCXO_SETTLE_LOOPS; d++) { }  /* 기동 settle */
+}
+
+// -----------------------------------------------------------------------------
+//                          Static Function Declarations
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+//                                Global Variables
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+//                                Static Variables
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+//                          Public Function Definitions
+// -----------------------------------------------------------------------------
+/******************************************************************************
+ * The function is used for some basic initialization related to the app.
+ *****************************************************************************/
+void rail_app_init(void)
+{
+  /////////////////////////////////////////////////////////////////////////////
+  // Put your application init code here!                                    //
+  // This is called once during start-up.                                    //
+  /////////////////////////////////////////////////////////////////////////////
+
+#if FS_N >= 1
+  /* ★출력 경로 초기화 — 반드시 첫 출력보다 먼저 (S3b 링버퍼/TX IRQ 준비) */
+  app_log_init();
+
+  /* ★S1: 부팅 배너. 이 줄이 PC 터미널에 뜨면 부팅·TCXO·HFXO·EUSART 가 전부 정상.
+   *  (S0 를 S1 에 합쳐 판정 — 소장 결정 2026-07-30)
+   *  틱과 달리 배너는 부팅 1회만 나오므로, 터미널에 배너가 반복되면 = 리셋 반복. */
+  app_log("\r\n=== NetAnalyzer_FG23_V01 (FS_N=%d) ===\r\n"
+          "UART 115200 8-N-1 / PB01=TX PB02=RX\r\n", FS_N);
+#endif
+
+#if FS_N >= 2
+  /* ★S2 완료조건: CRC-16/CCITT-FALSE 표준 벡터 2개 통과 (FG23_UART §1.2).
+   *  FAIL 시 **실제 계산값을 같이 찍는다** — "FAIL" 만 나오면 진단이 안 되고,
+   *  값을 보면 어디가 틀렸는지(init/refin/xorout 등) 바로 좁혀진다.
+   *  ※ 출력은 ASCII 전용 (app_log.h 참조 — 한글 UTF-8 이 길이 계산을 깨뜨렸던 건). */
+  {
+    uint16_t c1 = 0u, c2 = 0u;
+    bool ok = uart_frame_crc_selftest(&c1, &c2);
+
+    app_log("[S2] CRC16/CCITT-FALSE %s\r\n", ok ? "PASS" : "FAIL");
+    app_log("     \"123456789\" = %04X (exp %04X)\r\n",
+            c1, UART_FRAME_CRC_VECTOR_123456789);
+    app_log("     \"ABC\"       = %04X (exp %04X)\r\n",
+            c2, UART_FRAME_CRC_VECTOR_ABC);
+  }
+#endif
+
+#if FS_N >= 3
+  /* ★S3a 완료조건: 스펙 §1.2 "검증 예제" 프레임 재현 — CHK==EB7D, 길이 560.
+   *  이게 맞으면 필드 폭·패딩·LEN 계산·CRC 범위가 전부 스펙과 일치한다는 뜻.
+   *  프레임 원문도 같이 흘려 육안 판독 가능하게 한다(전부 printable ASCII, §1). */
+  {
+    uint16_t    crc   = 0u;
+    size_t      len   = 0u;
+    const char *frame = NULL;
+    bool ok = uart_frame_build_selftest(&crc, &len, &frame);
+
+    app_log("[S3a] frame build %s  len=%u (exp %u)  CHK=%04X (exp %04X)\r\n",
+            ok ? "PASS" : "FAIL",
+            (unsigned)len, (unsigned)UART_FRAME_TOTAL_LEN,
+            crc, UART_FRAME_EXAMPLE_CRC);
+
+    if (frame != NULL && len > 0u) {
+      app_log("[S3a] frame>>\r\n");
+
+      /* ★S3b 완료조건: 560B 송신 **호출 반환 시간** 측정.
+       *  블로킹(FS_TX_NONBLOCKING=0) = 560B@115200 ≈ 48.6ms 를 여기서 다 쓴다.
+       *  논블로킹(=1) = 링에 memcpy 만 하고 즉시 반환 → 1ms 미만이어야 한다.
+       *  ※ 측정 대상은 "전송 완료"가 아니라 "호출이 돌아오는 시간"이다.
+       *    전송 자체는 어느 쪽이든 48.6ms 가 걸린다(회선 속도) — 요점은
+       *    그동안 CPU 가 묶이느냐다. */
+      uint32_t t0 = (uint32_t)sl_sleeptimer_get_tick_count64();
+      app_log_raw(frame, len);            /* 560B — app_log 버퍼로는 못 보냄 */
+      uint32_t t1 = (uint32_t)sl_sleeptimer_get_tick_count64();
+
+      app_log("\r\n[S3a] <<end\r\n");
+
+      uint32_t f  = sl_sleeptimer_get_timer_frequency();
+      uint32_t dt = t1 - t0;
+      uint32_t us = (f != 0u) ? (uint32_t)(((uint64_t)dt * 1000000u) / f) : 0u;
+
+      app_log("[S3b] tx_mode=%s  call_return=%lu tick (%lu us)  limit<1000us\r\n",
+              /* [원본 -- "RING+IRQ" : IRQ 방식 1차 시도 때의 라벨. 실제 구현은
+               *  슈퍼루프 폴링 배출이라 오해 소지가 있어 정정 (app_log.h 참조)] */
+              FS_TX_NONBLOCKING ? "RING+POLL" : "BLOCKING",
+              (unsigned long)dt, (unsigned long)us);
+      app_log("[S3b] tick_freq=%lu Hz  pending=%u  dropped=%lu\r\n",
+              (unsigned long)f, (unsigned)app_log_pending(),
+              (unsigned long)app_log_dropped());
+    }
+  }
+#endif
+}
+
+void app_init(void)
+{
+#if !defined(SL_CATALOG_KERNEL_PRESENT)
+  rail_app_init();
+#else
+  app_task_init();
+#endif
+}
+
+// -----------------------------------------------------------------------------
+//                          Static Function Definitions
+// -----------------------------------------------------------------------------

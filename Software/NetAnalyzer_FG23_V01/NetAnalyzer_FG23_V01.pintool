@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<device:XMLDevice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" name="pin_tool.EFR32FG23A010F256GM48" partId="mcu.arm.efr32.fg23.efr32fg23a010f256gm48" contextId="com.silabs.sdk.stack.sisdk:2025.6.3._147483797">
+  <mode name="DefaultMode">
+    <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
+    <property object="EUSART0" propertyId="ABModule.selectedRequirement" value="eusart%T%SL_IOSTREAM_EUSART_VCOM%T%sl_iostream_eusart_Vcom_config.h"/>
+    <property object="EUSART0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="PA00" propertyId="pin.name" value="LEDR"/>
+    <property object="PA00" propertyId="pin.reserve" value="Reserved"/>
+    <property object="PA04" propertyId="pin.name" value="LEDG"/>
+    <property object="PA04" propertyId="pin.reserve" value="Reserved"/>
+    <property object="PA05" propertyId="pin.name" value="LEDY"/>
+    <property object="PA05" propertyId="pin.reserve" value="Reserved"/>
+    <property object="PC00" propertyId="pin.name" value="Key_In"/>
+    <property object="PC00" propertyId="pin.reserve" value="Reserved"/>
+    <property object="PORTIO" propertyId="portio.eusart0.enable.rx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.eusart0.enable.tx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.eusart0.location.rx" value="18"/>
+    <property object="PORTIO" propertyId="portio.eusart0.location.tx" value="17"/>
+  </mode>
+  <modeTransition>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.target" value="DefaultMode"/>
+  </modeTransition>
+</device:XMLDevice>
