@@ -28,4 +28,5 @@ cp "NetAnalyzer_FG23_V01/GNU ARM v12.2.1 - Default/NetAnalyzer_FG23_V01.s37" \
 | S4b | `S4b_20260731.s37` | 2026-07-31 | VER/STAT/TX/CH/XYZZY 5종 ACK 왕복 5/5 PASS, 전부 CRC OK |
 | **S4c** | `S4c_20260731_Phase1done.s37` | 2026-07-31 | **★Phase 1 완료** — CH/PHY/MODE/SCAN 16/16 PASS |
 | **921600** | `S4c_20260731_921600.s37` | 2026-07-31 | **보율 상향 검증** — 24개 검사 전부 통과, 프레임 손상 0 |
-| (S5 대기) | | | RAIL init + IsValidChannel(0)·(100) 둘 다 true |
+| S5 | `S5_20260731.s37` | 2026-07-31 | RAIL 핸들 OK + 채널 유효성 8/8 (그룹경계 4 유효, 사이/밖 4 무효) |
+| (S6a 대기) | | | wake 채널(롱PA) 감지기 ALARM 수신, crc pass |

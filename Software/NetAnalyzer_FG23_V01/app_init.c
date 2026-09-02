@@ -48,6 +48,11 @@
 #include "uart_frame.h"                          /* CRC-16/CCITT-FALSE */
 #endif
 
+#if FS_N >= 5
+#include "sl_rail.h"
+#include "sl_rail_util_init.h"                   /* sl_rail_util_get_handle */
+#endif
+
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -122,8 +127,15 @@ void rail_app_init(void)
   /* ★S1: 부팅 배너. 이 줄이 PC 터미널에 뜨면 부팅·TCXO·HFXO·EUSART 가 전부 정상.
    *  (S0 를 S1 에 합쳐 판정 — 소장 결정 2026-07-30)
    *  틱과 달리 배너는 부팅 1회만 나오므로, 터미널에 배너가 반복되면 = 리셋 반복. */
+  /* ★보율을 하드코딩하지 않는다 (2026-07-31 정정).
+   *  115200 → 921600 으로 바꿨을 때 이 문자열만 115200 으로 남아 **거짓 정보**를
+   *  출력했다. 로그가 설정과 어긋나면 나중에 그 로그를 근거로 디버깅하다 헤맨다.
+   *  (같은 실수: S3b 의 "RING+IRQ" 라벨)
+   *  [원본 -- "UART 115200 8-N-1 / PB01=TX PB02=RX"] */
   app_log("\r\n=== NetAnalyzer_FG23_V01 (FS_N=%d) ===\r\n"
-          "UART 115200 8-N-1 / PB01=TX PB02=RX\r\n", FS_N);
+          "UART %lu 8-N-1 / PB%02u=TX PB%02u=RX\r\n",
+          FS_N, (unsigned long)BOARD_UART_BAUDRATE,
+          (unsigned)BOARD_UART_TX_PIN, (unsigned)BOARD_UART_RX_PIN);
 #endif
 
 #if FS_N >= 2
@@ -185,6 +197,50 @@ void rail_app_init(void)
       app_log("[S3b] tick_freq=%lu Hz  pending=%u  dropped=%lu\r\n",
               (unsigned long)f, (unsigned)app_log_pending(),
               (unsigned long)app_log_dropped());
+    }
+  }
+#endif
+
+#if FS_N >= 5
+  /* ★S5 완료조건: RAIL 핸들 획득 + 채널 유효성.
+   *  radioconf 2그룹이 실제로 rail_config 에 반영됐는지를 **런타임에서** 본다.
+   *  빌드 시점 확인(rail_config.c 육안 대조)은 §1 에서 이미 했으나, 그건
+   *  "생성물이 맞다"까지고 "칩이 그렇게 동작한다"는 아니다.
+   *
+   *  ★여기까지 왔다는 것 자체가 TCXO/HFXO 검증이기도 하다 —
+   *   sl_rail_util_init(sl_event_handler.c:50)이 39MHz HFXO 를 요구하므로,
+   *   TCXO 생성자가 실패했으면 이 줄에 도달하기 전에 assert/hang 이 난다.
+   *
+   *  검사 대상: 그룹 경계 + 사이 구간.
+   *   0,24    = 데이터 그룹(짧은PA) 양끝     → 유효 기대
+   *   100,124 = wake 그룹(롱PA) 양끝         → 유효 기대
+   *   25,50,99,125 = 그룹 사이/밖            → **무효 기대**
+   *  마지막 줄이 중요하다. cmd_parse 의 ch_is_valid() 가 "25~99 는 없는 채널"
+   *  이라고 전제하는데, 그 전제를 라디오에게 직접 확인받는 것이다. */
+  {
+    sl_rail_handle_t rail = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST0);
+
+    if (rail == NULL) {
+      app_log("[S5] FAIL rail handle is NULL\r\n");
+    } else {
+      static const uint16_t probe[]  = { 0u, 24u, 100u, 124u, 25u, 50u, 99u, 125u };
+      static const bool     expect[] = { true, true, true, true, false, false, false, false };
+      unsigned pass = 0u;
+
+      app_log("[S5] rail handle OK\r\n");
+      for (unsigned i = 0; i < (sizeof(probe) / sizeof(probe[0])); i++) {
+        bool valid = (sl_rail_is_valid_channel(rail, probe[i])
+                      == SL_RAIL_STATUS_NO_ERROR);
+        bool ok    = (valid == expect[i]);
+        pass += ok;
+        app_log("[S5] ch=%03u %-7s (exp %-7s) %s\r\n",
+                (unsigned)probe[i],
+                valid     ? "valid" : "invalid",
+                expect[i] ? "valid" : "invalid",
+                ok ? "PASS" : "FAIL");
+      }
+      app_log("[S5] result: %u/%u PASS\r\n",
+              pass, (unsigned)(sizeof(probe) / sizeof(probe[0])));
     }
   }
 #endif
