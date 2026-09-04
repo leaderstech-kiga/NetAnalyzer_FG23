@@ -241,6 +241,63 @@ void rail_app_init(void)
       }
       app_log("[S5] result: %u/%u PASS\r\n",
               pass, (unsigned)(sizeof(probe) / sizeof(probe[0])));
+
+#if FS_N >= 6
+      /* ★S6a — RF 수신 무장. S5 로 핸들·채널이 확인된 **직후**에만 한다.
+       *
+       *  ★안전 (절대선 / JUDGMENT §1):
+       *   여기는 **수신 전용**이다. 송신 API(sl_rail_start_tx 계열)는 한 줄도
+       *   없고, FS_N<9 TX 컴파일 제외 정책도 그대로다. 스니퍼가 감지기의
+       *   경보·연동에 개입하는 경로가 생기지 않는다. (소장 결정 2026-09-02
+       *   옵션 A = 수동 관측, QUERY TX 앞당기지 않음)
+       *
+       *  ★감지기 참고 구현: LTD_W10D_V03/drv_rf.c:95(config_events),
+       *   :290(start_rx), :354~371(on_event). **로직만** 가져왔다 —
+       *   API 세대가 다르다:
+       *     감지기 = RAIL_Handle_t / RAIL_StartRx / RAIL_Events_t   (구)
+       *     스니퍼 = sl_rail_handle_t / sl_rail_start_rx / sl_rail_events_t (신)
+       *   심볼은 추측하지 않고 링커맵(NetAnalyzer_FG23_V01.map)에 실제로
+       *   링크된 이름과 SDK 헤더 시그니처로 확인했다.
+       *   (simplicity_sdk_2/platform/radio/rail_lib/common/sl_rail.h:3525 등) */
+
+      /* (1) RX_PACKET_RECEIVED 이벤트만 명시 활성.
+       *     mask = 건드릴 비트, events = 그 비트에 넣을 값. 다른 이벤트는
+       *     rail_util_init 컴포넌트 설정을 그대로 둔다. */
+      (void)sl_rail_config_events(rail,
+                                  SL_RAIL_EVENT_RX_PACKET_RECEIVED,
+                                  SL_RAIL_EVENT_RX_PACKET_RECEIVED);
+
+      /* (2) CRC 깨진 패킷 처리 방침 (step_config.h FS_S6_CRC_ERR_SHOW 참조).
+       *     RAIL 기본은 CRC 오류 패킷을 조용히 버린다 → 스니퍼로는 최악이다.
+       *     "안 옴" 과 "왔는데 깨짐" 이 구분돼야 원인을 좁힐 수 있다. */
+#if FS_S6_CRC_ERR_SHOW
+      (void)sl_rail_config_rx_options(rail,
+                                      SL_RAIL_RX_OPTION_IGNORE_CRC_ERRORS,
+                                      SL_RAIL_RX_OPTION_IGNORE_CRC_ERRORS);
+#endif
+
+      /* (3) 상시 수신 시작. 스케줄러 미사용(NULL) = 계속 RX 상태 유지.
+       *     S8 스캔 스케줄러 전까지는 **한 채널 고정**이 맞다 — 채널을 돌리면
+       *     "안 잡힘"이 채널 탓인지 타이밍 탓인지 안 갈린다. (한 번에 한 변수) */
+      sl_rail_status_t rxst = sl_rail_start_rx(rail,
+                                               (uint16_t)FS_S6_CHANNEL,
+                                               NULL);
+
+      app_log("[S6a] start_rx ch=%u %s  (crc_err_show=%d)\r\n",
+              (unsigned)FS_S6_CHANNEL,
+              (rxst == SL_RAIL_STATUS_NO_ERROR) ? "OK" : "FAIL",
+              (int)FS_S6_CRC_ERR_SHOW);
+
+      if (rxst != SL_RAIL_STATUS_NO_ERROR) {
+        /* 여기서 실패하면 수신은 시작도 안 된 것이다. 이후 "무출력" 을
+         *  전파 문제로 오진하지 않도록 상태를 명시한다. */
+        app_log("[S6a] FAIL rx not armed (status=0x%04X) "
+                "-- 채널/PHY 설정부터 확인\r\n", (unsigned)rxst);
+      } else {
+        app_log("[S6a] listening... "
+                "(감지기 DIP: GROUP=1 / NODE=1 확인 후 리셋)\r\n");
+      }
+#endif
     }
   }
 #endif

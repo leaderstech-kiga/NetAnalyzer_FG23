@@ -55,6 +55,11 @@
 #endif
 #endif
 
+#if FS_N >= 6
+#include "sl_rail_util_init.h"                   /* sl_rail_util_get_handle */
+#include <string.h>                              /* memset */
+#endif
+
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -85,6 +90,19 @@ static void s4a_rx_poll(void);
 #if FS_N >= 1
 static uint64_t s_s1_next_tick;   /* 다음 틱 시각 (sleeptimer tick) */
 static uint32_t s_s1_seq;         /* 틱 일련번호 — 멈춤/재부팅 육안 판별용 */
+#endif
+
+#if FS_N >= 6
+/* ★S6a — ISR ↔ 메인루프 인계.
+ *  ISR 은 hold 만 하고 플래그를 세운다. 실제 복사/출력은 메인루프에서 한다.
+ *  (ISR 에서 app_log 를 부르면 UART 링버퍼를 ISR 문맥에서 만지게 되고,
+ *   슈퍼루프 규약 "Do not call blocking functions" 도 깨진다.)
+ *  volatile 필수 — ISR 이 쓰고 메인루프가 읽는다. */
+static volatile bool     s_s6_pending;    /* 미배출 패킷 있음 */
+static volatile uint32_t s_s6_evt_count;  /* ISR 진입 횟수 (누락 진단용) */
+static uint32_t          s_s6_pkt_count;  /* 메인루프가 실제 배출한 수 */
+
+static void s6_rx_poll(void);
 #endif
 
 // -----------------------------------------------------------------------------
@@ -124,6 +142,10 @@ void app_process_action(void)
 
 #if FS_N >= 4
   s4a_rx_poll();
+#endif
+
+#if FS_N >= 6
+  s6_rx_poll();
 #endif
 }
 
@@ -192,6 +214,110 @@ static void s4a_rx_poll(void)
 }
 #endif
 
+#if FS_N >= 6
+/***************************************************************************//**
+ * S6a — RF 수신 패킷 배출 (메인루프).
+ *
+ *  ★완료조건: 감지기 리셋 1회 → wake ch101 에서 LINK_PING(0x24) 1개 수신 +
+ *   crc pass. (step_config.h §S6 (3) 관측 대상 표)
+ *
+ *  ★출력 형식 — S7 파서 전이라 **hex 덤프까지**가 목표다:
+ *    [S6a] #1 ch=101 rssi=-72 crc=PASS len=8  17 02 01 01 24 05 00 01
+ *                                              ^len ^VER GRP SRC MSG SEQlo SEQhi HOP
+ *
+ *  ★패킷 바이트 배열: RAIL 은 **wire 그대로** 준다 → buf[0]=LEN, buf[1..]=본문.
+ *   (감지기 drv_rf.c:337 확인. v1.1 헤더는 buf[1] 부터 시작한다)
+ *
+ *  ★진단 카운터: evt(ISR 진입) vs pkt(배출) 가 어긋나면 배출이 못 따라간 것.
+ ******************************************************************************/
+static void s6_rx_poll(void)
+{
+  if (!s_s6_pending) {
+    return;
+  }
+  s_s6_pending = false;   /* 먼저 내린다 — 배출 중 새 패킷이 오면 다시 세워짐 */
+
+  sl_rail_handle_t rail = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST0);
+  if (rail == NULL) {
+    return;
+  }
+
+  /* hold 된 패킷이 여러 개 쌓였을 수 있다 → 없어질 때까지 배출.
+   *  ⚠ 무한루프 방지 상한: 롱PA 12000bit(~4초) 라 한 번에 여러 개가 쌓일
+   *    일은 거의 없지만, 상한 없이 도는 코드를 메인루프에 두지 않는다. */
+  for (unsigned guard = 0; guard < 8u; guard++) {
+    sl_rail_rx_packet_info_t info;
+    memset(&info, 0, sizeof(info));
+
+    sl_rail_rx_packet_handle_t h =
+        sl_rail_get_rx_packet_info(rail,
+                                   SL_RAIL_RX_PACKET_HANDLE_OLDEST_COMPLETE,
+                                   &info);
+    if (h == SL_RAIL_RX_PACKET_HANDLE_INVALID) {
+      break;                        /* 더 없음 — 정상 종료 */
+    }
+
+    /* 상세정보(RSSI/CRC/채널). 실패해도 패킷은 release 해야 하므로 분기만. */
+    sl_rail_rx_packet_details_t det;
+    memset(&det, 0, sizeof(det));
+    bool det_ok = (sl_rail_get_rx_packet_details(rail, h, &det)
+                   == SL_RAIL_STATUS_NO_ERROR);
+
+    /* 페이로드 복사. 헤더 7B + DATA 16B = 23B 가 현재 최대(STATUS_REPORT).
+     *  64B 는 여유를 두되 스택을 크게 먹지 않는 선. */
+    uint8_t  buf[64];
+    uint16_t n = 0u;
+    bool     oversize = (info.packet_bytes > (uint16_t)sizeof(buf));
+
+    /* ⚠ sl_rail_copy_rx_packet 은 packet_bytes 전체를 p_dest 에 쓴다.
+     *  버퍼보다 크면 **부분 복사가 아니라 스택 오버런**이다 → 호출하지 않는다.
+     *  이 경우 길이만 보고하고 hex 는 생략한다. (현재 최대 23B 라 실제로는
+     *  안 걸리지만, 깨진 프레임이 엉뚱한 LEN 을 들고 올 수 있다) */
+    if (!oversize) {
+      if (sl_rail_copy_rx_packet(rail, buf, &info) == SL_RAIL_STATUS_NO_ERROR) {
+        n = info.packet_bytes;
+      }
+    }
+
+    /* ★release 는 여기서 **반드시**. 위 분기 어디로 가도 지나간다. */
+    (void)sl_rail_release_rx_packet(rail, h);
+
+    s_s6_pkt_count++;
+
+    /* ---- 출력 ---- */
+    app_log("[S6a] #%lu ch=%u rssi=%d crc=%s len=%u%s\r\n",
+            (unsigned long)s_s6_pkt_count,
+            det_ok ? (unsigned)det.channel : (unsigned)FS_S6_CHANNEL,
+            det_ok ? (int)det.rssi_dbm : 0,
+            det_ok ? (det.crc_passed ? "PASS" : "FAIL") : "????",
+            (unsigned)info.packet_bytes,
+            oversize ? " (oversize -- hex 생략)" : "");
+
+    /* hex 덤프 — 한 줄에 16B. app_log 는 가변인자 포맷이라 한 번에 길게
+     *  넘기지 않고 **줄 단위**로 끊는다 (S2 에서 물린 버퍼 초과 재발 방지). */
+    for (uint16_t off = 0; off < n; off += 16u) {
+      char     line[16 * 3 + 1];
+      unsigned pos = 0u;
+      for (uint16_t i = off; (i < off + 16u) && (i < n); i++) {
+        static const char hexd[] = "0123456789ABCDEF";
+        line[pos++] = hexd[(buf[i] >> 4) & 0x0Fu];
+        line[pos++] = hexd[buf[i] & 0x0Fu];
+        line[pos++] = ' ';
+      }
+      line[pos] = '\0';
+      app_log("[S6a]   %04u: %s\r\n", (unsigned)off, line);
+    }
+  }
+
+  /* ISR 진입 수와 배출 수가 어긋나면 알린다 (조용한 유실 방지). */
+  if (s_s6_evt_count != s_s6_pkt_count) {
+    app_log("[S6a] note evt=%lu pkt=%lu (차이 = 미배출/중복 이벤트)\r\n",
+            (unsigned long)s_s6_evt_count,
+            (unsigned long)s_s6_pkt_count);
+  }
+}
+#endif
+
 /******************************************************************************
  * RAIL callback, called if a RAIL event occurs
  *****************************************************************************/
@@ -205,6 +331,19 @@ SL_CODE_RAM void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_eve
   // This is called from ISR context.                                      //
   // Do not call blocking functions from here!                             //
   ///////////////////////////////////////////////////////////////////////////
+
+#if FS_N >= 6
+  /* ★S6a — ISR 에서는 **hold + 플래그**만. 출력은 메인루프(s6_rx_poll).
+   *  hold 를 안 하면 ISR 반환 시 RAIL 이 패킷을 자동 해제해 메인루프가
+   *  꺼낼 때는 이미 없다. (감지기 drv_rf.c:361~362 과 같은 패턴)
+   *  ⚠ hold 한 패킷은 반드시 release 해야 한다 — 안 하면 RX FIFO 가 차서
+   *    몇 개 받고 조용히 멈춘다. release 는 s6_rx_poll 이 책임진다. */
+  if (events & SL_RAIL_EVENT_RX_PACKET_RECEIVED) {
+    (void)sl_rail_hold_rx_packet(rail_handle);
+    s_s6_evt_count++;
+    s_s6_pending = true;
+  }
+#endif
 
 #if defined(SL_CATALOG_KERNEL_PRESENT)
   app_task_notify();
