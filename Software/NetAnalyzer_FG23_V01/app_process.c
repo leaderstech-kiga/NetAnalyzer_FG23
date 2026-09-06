@@ -245,6 +245,8 @@ static void s6_rx_poll(void)
   /* hold 된 패킷이 여러 개 쌓였을 수 있다 → 없어질 때까지 배출.
    *  ⚠ 무한루프 방지 상한: 롱PA 12000bit(~4초) 라 한 번에 여러 개가 쌓일
    *    일은 거의 없지만, 상한 없이 도는 코드를 메인루프에 두지 않는다. */
+  unsigned drained = 0u;   /* 이번 호출에서 실제 배출한 패킷 수 (재무장 판단용) */
+
   for (unsigned guard = 0; guard < 8u; guard++) {
     sl_rail_rx_packet_info_t info;
     memset(&info, 0, sizeof(info));
@@ -283,6 +285,7 @@ static void s6_rx_poll(void)
     (void)sl_rail_release_rx_packet(rail, h);
 
     s_s6_pkt_count++;
+    drained++;
 
     /* ---- 출력 ---- */
     app_log("[S6a] #%lu ch=%u rssi=%d crc=%s len=%u%s\r\n",
@@ -306,6 +309,32 @@ static void s6_rx_poll(void)
       }
       line[pos] = '\0';
       app_log("[S6a]   %04u: %s\r\n", (unsigned)off, line);
+    }
+  }
+
+  /* ★★RX 재무장 fallback (2026-09-04 추가 — S6a 실측 결함 수정).
+   *
+   *  주 대책은 app_init.c 의 sl_rail_set_rx_transitions(success/error=RX) 이고,
+   *  이건 그게 실패했을 때를 위한 2중 안전장치다.
+   *  rail_util_init 설정이 RX 후 IDLE 로 전이시키는데(설정 헤더 :161,:166)
+   *  재무장이 없으면 **첫 패킷 이후 영구 수신 정지**한다. 실측으로 물렸다
+   *  (화재 10회 중 1회 수신). 스니퍼가 조용히 귀머거리가 되는 게 최악이라
+   *  비용이 싼 쪽으로 이중화한다.
+   *
+   *  ★"이미 RX 중인데 또 부르면 수신 중인 패킷을 깨지 않나?" — 안 깬다.
+   *   sl_rail.h sl_rail_start_rx() 문서 명시:
+   *     "If you call this while not idle but **with a different channel**,
+   *      any ongoing receive or transmit operation will be aborted."
+   *   → 중단은 **채널이 다를 때만**. 여기는 항상 같은 FS_S6_CHANNEL 이므로
+   *     진행 중 수신을 깨지 않는다. (wake 롱PA 는 프리앰블만 ~4초라
+   *     "수신 중"일 확률이 높다. 이 확인 없이 넣었으면 오히려 유실을 만들 뻔했다)
+   *  ⚠ 매 루프 호출은 낭비이므로 **패킷을 실제로 배출했을 때만** 부른다.
+   *  ⚠ (a) 가 동작 중이면 이 호출은 사실상 no-op. 둘이 충돌하지 않는다. */
+  if (drained > 0u) {
+    sl_rail_status_t rst = sl_rail_start_rx(rail, (uint16_t)FS_S6_CHANNEL, NULL);
+    if (rst != SL_RAIL_STATUS_NO_ERROR) {
+      app_log("[S6a] FAIL re-arm rx (status=0x%04X) -- 이후 수신 정지 가능\r\n",
+              (unsigned)rst);
     }
   }
 

@@ -276,7 +276,48 @@ void rail_app_init(void)
                                       SL_RAIL_RX_OPTION_IGNORE_CRC_ERRORS);
 #endif
 
-      /* (3) 상시 수신 시작. 스케줄러 미사용(NULL) = 계속 RX 상태 유지.
+      /* (3) ★★RX 자동 재무장 (2026-09-04 추가 — S6a 실측 결함 수정).
+       *
+       *  [결함] 초판(앵커 S6a_20260904.s37)에는 이 블록이 없었다.
+       *   `config/sl_rail_util_init_inst0_config.h:161,:166` 이
+       *     SL_RAIL_UTIL_INIT_TRANSITION_INST0_RX_SUCCESS  RAIL_RF_STATE_IDLE
+       *     SL_RAIL_UTIL_INIT_TRANSITION_INST0_RX_ERROR    RAIL_RF_STATE_IDLE
+       *   이라 **패킷 1개를 받으면 라디오가 IDLE 로 떨어진다.** 재무장이 없으니
+       *   그 뒤로는 영원히 못 받는다.
+       *   실측 증상: 화재 10회 발생 중 **1회만 수신**. 전파 문제로 오해하기 쉽다
+       *   (RSSI 가 -6dBm 로 아주 강했는데도 안 들어왔다).
+       *
+       *  [왜 놓쳤나] 감지기는 이 함정을 이미 겪고 기록해 뒀다 —
+       *   LTD_W10D_V03/drv_rf.c:158~161 "명시적 재활성 없으면 이후 알람 수신 불가".
+       *   참고 구현에서 **재무장 부분만 빠뜨렸다.** 메모 §5 의
+       *   "생성물(autogen)까지 봐야 확인이다" 가 형태를 바꿔 재발한 것 —
+       *   이번엔 rail_util_init **설정 헤더**를 안 봤다. RAIL 은 코드뿐 아니라
+       *   Studio 설정이 동작을 바꾸므로 설정 헤더도 확인 대상이다.
+       *
+       *  [수정] 이중으로 건다. 스니퍼는 놓치면 안 되는 장비다.
+       *   (a) 자동 전이를 RX 유지로 → 하드웨어가 알아서 복귀, 패킷 사이 공백 0
+       *   (b) 배출 후 start_rx 재호출 (app_process.c s6_rx_poll) → (a) 실패 대비
+       *  Studio config 를 직접 고치는 방법도 있으나, Studio 재생성이 설정을
+       *  되돌린 사고가 이미 있어(board_cfg.h:38) **코드에서 명시**하는 쪽이 안전하다.
+       *  API: sl_rail.h:2390 / sl_rail_types.h sl_rail_state_transitions_t */
+      {
+        sl_rail_state_transitions_t rxtr = {
+          .success = SL_RAIL_RF_STATE_RX,
+          .error   = SL_RAIL_RF_STATE_RX,
+        };
+        sl_rail_status_t trst = sl_rail_set_rx_transitions(rail, &rxtr);
+
+        app_log("[S6a] rx_transitions success=RX error=RX %s\r\n",
+                (trst == SL_RAIL_STATUS_NO_ERROR) ? "OK" : "FAIL");
+
+        if (trst != SL_RAIL_STATUS_NO_ERROR) {
+          /* (a) 실패해도 (b) fallback 이 있으므로 치명적이지 않다.
+           *  다만 연속 수신 성능이 떨어지므로 명시해 둔다. */
+          app_log("[S6a] warn: 자동 재무장 실패 -- poll 재무장(fallback)에 의존\r\n");
+        }
+      }
+
+      /* (4) 상시 수신 시작. 스케줄러 미사용(NULL) = 계속 RX 상태 유지.
        *     S8 스캔 스케줄러 전까지는 **한 채널 고정**이 맞다 — 채널을 돌리면
        *     "안 잡힘"이 채널 탓인지 타이밍 탓인지 안 갈린다. (한 번에 한 변수) */
       sl_rail_status_t rxst = sl_rail_start_rx(rail,
