@@ -32,6 +32,7 @@ component:
 - {id: clock_manager}
 - {id: code_classification}
 - {id: device_init}
+- {id: emlib_i2c}
 - instance: [Vcom]
   id: iostream_eusart
 - {id: mpu}
@@ -52,13 +53,15 @@ configuration:
 - {name: OS_CFG_SCHED_ROUND_ROBIN_EN, value: '1'}
 - {name: OS_CFG_STAT_TASK_EN, value: '1'}
 - {name: OS_CFG_TASK_PROFILE_EN, value: '1'}
-- {name: SL_IOSTREAM_USART_VCOM_FLOW_CONTROL_TYPE, value: usartHwFlowControlCtsAndRts}
+- {name: SL_IOSTREAM_USART_VCOM_FLOW_CONTROL_TYPE, value: usartHwFlowControlNone}
 - condition: [device_series_2]
   name: SL_IOSTREAM_EUSART_VCOM_FLOW_CONTROL_TYPE
-  value: SL_IOSTREAM_EUSART_UART_FLOW_CTRL_CTS_RTS
+  value: SL_IOSTREAM_EUSART_UART_FLOW_CTRL_NONE
 - condition: [device_series_3]
   name: SL_IOSTREAM_EUSART_VCOM_FLOW_CONTROL_TYPE
-  value: SL_IOSTREAM_EUSART_UART_FLOW_CTRL_CTS_RTS
+  value: SL_IOSTREAM_EUSART_UART_FLOW_CTRL_NONE
+- {name: SL_IOSTREAM_EUSART_VCOM_BAUDRATE, value: '921600'}
+- {name: SL_IOSTREAM_EUSART_VCOM_RX_BUFFER_SIZE, value: '1024'}
 - {name: SL_RAIL_UTIL_INIT_INIT_COMPLETE_CALLBACK_INST0_ENABLE, value: '1'}
 - {name: SL_RAIL_UTIL_INIT_RADIO_CONFIG_SUPPORT_INST0_ENABLE, value: '1'}
 - {name: SL_RAIL_UTIL_INIT_PROTOCOLS_INST0_ENABLE, value: '1'}

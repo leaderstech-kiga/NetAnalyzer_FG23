@@ -3,7 +3,7 @@
   "specVersion" : "1.6",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-07-30T06:10:34Z",
+    "timestamp" : "2026-10-16T04:27:37Z",
     "authors" : [ {
       "name" : "Silicon Laboratories, Inc."
     } ],
@@ -62,6 +62,18 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.3:device_init",
       "name" : "Automatic Device Initialization",
+      "version" : "2025.6.3",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.3:emlib_i2c",
+      "name" : "I2C",
       "version" : "2025.6.3",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -134,6 +146,18 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.3:sl_rail_util_init",
       "name" : "SL RAIL Utility, Initialization",
+      "version" : "2025.6.3",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.3:sleeptimer",
+      "name" : "Sleep Timer",
       "version" : "2025.6.3",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -600,6 +624,18 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.3:emlib_burtc",
+      "name" : "BURTC",
+      "version" : "2025.6.3",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.3:emlib_syscfg",
       "name" : "SYSCFG",
       "version" : "2025.6.3",
@@ -788,8 +824,32 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.3:hal_sysrtc",
+      "name" : "SYSRTC",
+      "version" : "2025.6.3",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.3:iostream_uart_common",
       "name" : "IO Stream: Common code for UART-type streams",
+      "version" : "2025.6.3",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.3:emlib_timer",
+      "name" : "TIMER",
       "version" : "2025.6.3",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -886,54 +946,6 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.3:gpio",
       "name" : "GPIO Driver",
-      "version" : "2025.6.3",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.3:sleeptimer",
-      "name" : "Sleep Timer",
-      "version" : "2025.6.3",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.3:emlib_burtc",
-      "name" : "BURTC",
-      "version" : "2025.6.3",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.3:hal_sysrtc",
-      "name" : "SYSRTC",
-      "version" : "2025.6.3",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.3:emlib_timer",
-      "name" : "TIMER",
       "version" : "2025.6.3",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."

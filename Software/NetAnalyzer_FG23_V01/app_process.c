@@ -41,9 +41,17 @@
 
 #include "step_config.h"                    /* FS_N 스텝 가드 (JUDGMENT §3.12) */
 
+#if FS_WDOG >= 1
+#include "em_device.h"                      /* WDOG0 레지스터 (S14e) */
+#endif
+
 #if FS_N >= 1
 #include "app_log.h"                             /* ASCII 전용·길이 안전 로그 */
 #include "sl_sleeptimer.h"
+#endif
+
+#if (FS_INA >= 1) && (FS_N >= 1)
+#include "ina219.h"                              /* S11a INA219 전류 감시 */
 #endif
 
 #if FS_N >= 4
@@ -119,6 +127,32 @@ void app_process_action(void)
   // Do not call blocking functions from here!                             //
   ///////////////////////////////////////////////////////////////////////////
 
+#if FS_WDOG >= 1
+  /* ★S14e — 워치독 급이. 루프가 돌고 있다는 **유일한 증거**다.
+   *
+   *  ★`SYNCBUSY_CMD` 를 먼저 확인해야 한다. 동기화가 끝나기 전에 CMD 를 또 쓰면
+   *   **BusFault** 가 난다 (em_wdog.c WDOGn_Feed 의 Series-2 분기 주석).
+   *   ULFRCO 1kHz 기준 한 번의 CLEAR 가 동기화되는 데 수 ms 가 걸리는데 이 루프는
+   *   그보다 훨씬 빨리 도므로, **대부분의 반복은 그냥 건너뛴다.** 정상이다 —
+   *   주기가 2초라 수 ms 의 급이 지연은 아무 의미가 없다.
+   *   (여기서 while 로 기다리면 매 반복 수 ms 를 날려 루프를 망가뜨린다)
+   *
+   *  ★PRIMASK 로 감싸는 이유: 확인과 쓰기 사이에 끼어들어 CMD 를 쓰는 코드가
+   *   생기면 그 BusFault 가 난다. 지금 이 프로젝트에 WDOG0->CMD 를 쓰는 곳은
+   *   여기뿐이지만, RAIL 이벤트 콜백이 도는 환경이라 **나중에 생길 수 있다.**
+   *   CMSIS 내장함수라 헤더만으로 되고(컴포넌트 추가 불필요) 수 사이클이다.
+   *   ※ em_core.h 의 CORE_ENTER_ATOMIC 과 동작은 같으나 em_core.o 가 이 빌드에
+   *     없어 같은 일을 CMSIS 로 한다. (wdog_start 주석의 .slcp 무변경 원칙) */
+  {
+    uint32_t pri = __get_PRIMASK();
+    __disable_irq();
+    if ((WDOG0->SYNCBUSY & WDOG_SYNCBUSY_CMD) == 0u) {
+      WDOG0->CMD = WDOG_CMD_CLEAR;
+    }
+    __set_PRIMASK(pri);
+  }
+#endif
+
 #if FS_N >= 1
   /* ★S3b: UART 링버퍼 배출. 매 루프 선두에서 호출한다(블로킹 아님).
    *  IRQ 를 못 쓰는 이유는 app_log.h 참조 — iostream autogen 이 EUSART0_TX
@@ -146,6 +180,14 @@ void app_process_action(void)
 
 #if FS_N >= 6
   s6_rx_poll();
+#endif
+
+#if (FS_INA >= 1) && (FS_N >= 1)
+  /* ★S11a — 내부에서 1Hz 를 판단한다. 대부분의 호출은 tick 비교 한 번으로 끝.
+   *  ⚠ 주기가 도래한 호출만 I2C 전송을 하며, 그때 **최악 10ms 블로킹**이다.
+   *    (i2c_xfer 의 2층 타임아웃. 워치독 2049ms 대비 200배 여유)
+   *  ⚠ S1 틱과 위상을 500ms 어긋나게 잡아 두 블로킹이 겹치지 않게 했다. */
+  ina219_poll();
 #endif
 }
 

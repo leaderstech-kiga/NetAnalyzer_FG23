@@ -48,3 +48,6 @@ GNU?ARM*/
 #
 #  .cproject / .project / .slcp / .slps / .pintool / config/
 #    프로젝트 정의·설정. 이게 있어야 다른 PC 에서 동일 빌드가 재현된다.
+
+# --- 커밋 문구 임시 파일 (Claude 가 생성, 커밋 대상 아님) -------------------
+_commit_msg.txt

@@ -5,7 +5,7 @@
   "name" : "Silicon-Laboratories",
   "documentNamespace" : "https://silabs.com",
   "creationInfo" : {
-    "created" : "2026-07-30T06:10:34Z",
+    "created" : "2026-10-16T04:27:37Z",
     "creators" : [ "Tool: Silicon Labs Configuration Tooling" ]
   },
   "comment" : "TERMS OF USE - SILICON LABORATORIES INC.\n(With respect to Silicon Labs software components, this Software Bill of Materials (SBOM) is based upon Silicon Labs'\nreview and analysis of the code version when released.  It is provided \"AS IS\" and does not modify, change or alter\nthe terms or conditions of your use of Silicon Labs' software and/or SDKs based upon license terms and/or agreements\nassociated with this software or SDKs when distributed to you, received by you, or installed by you.  Further, no\nwarranties or obligations are created by this SBOM.  It is your obligation to comply with the terms of licenses\nreferenced in this SBOM.)",
@@ -44,6 +44,14 @@
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-device_init",
     "name" : "Automatic Device Initialization",
+    "versionInfo" : "2025.6.3",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
+  }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_i2c",
+    "name" : "I2C",
     "versionInfo" : "2025.6.3",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -92,6 +100,14 @@
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-sl_rail_util_init",
     "name" : "SL RAIL Utility, Initialization",
+    "versionInfo" : "2025.6.3",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
+  }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-sleeptimer",
+    "name" : "Sleep Timer",
     "versionInfo" : "2025.6.3",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -402,6 +418,14 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_burtc",
+    "name" : "BURTC",
+    "versionInfo" : "2025.6.3",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
+  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_syscfg",
     "name" : "SYSCFG",
     "versionInfo" : "2025.6.3",
@@ -529,8 +553,24 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-hal_sysrtc",
+    "name" : "SYSRTC",
+    "versionInfo" : "2025.6.3",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
+  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-iostream_uart_common",
     "name" : "IO Stream: Common code for UART-type streams",
+    "versionInfo" : "2025.6.3",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
+  }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_timer",
+    "name" : "TIMER",
     "versionInfo" : "2025.6.3",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -600,38 +640,6 @@
     "downloadLocation" : "NOASSERTION",
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
-  }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-sleeptimer",
-    "name" : "Sleep Timer",
-    "versionInfo" : "2025.6.3",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_burtc",
-    "name" : "BURTC",
-    "versionInfo" : "2025.6.3",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-hal_sysrtc",
-    "name" : "SYSRTC",
-    "versionInfo" : "2025.6.3",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_timer",
-    "name" : "TIMER",
-    "versionInfo" : "2025.6.3",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
   } ],
   "relationships" : [ {
     "spdxElementId" : "SPDXRef-DOCUMENT",
@@ -652,6 +660,10 @@
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-device_init",
+    "relationshipType" : "CONTAINS"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_i2c",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
@@ -676,6 +688,10 @@
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-sl_rail_util_init",
+    "relationshipType" : "CONTAINS"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-sleeptimer",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
@@ -831,6 +847,10 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_burtc",
+    "relationshipType" : "CONTAINS"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_syscfg",
     "relationshipType" : "CONTAINS"
   }, {
@@ -891,7 +911,15 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-hal_sysrtc",
+    "relationshipType" : "CONTAINS"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-iostream_uart_common",
+    "relationshipType" : "CONTAINS"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_timer",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
@@ -924,22 +952,6 @@
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-gpio",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-sleeptimer",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_burtc",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-hal_sysrtc",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2025.6.3",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2025.6.3-emlib_timer",
     "relationshipType" : "CONTAINS"
   } ]
 }

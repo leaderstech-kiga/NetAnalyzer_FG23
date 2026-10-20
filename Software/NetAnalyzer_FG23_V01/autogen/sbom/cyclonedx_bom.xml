@@ -10,7 +10,7 @@ referenced in this SBOM.)
 -->
 <bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
-    <timestamp>2026-07-30T06:10:34Z</timestamp>
+    <timestamp>2026-10-16T04:27:37Z</timestamp>
     <authors>
       <author>
         <name>Silicon Laboratories, Inc.</name>
@@ -57,6 +57,16 @@ referenced in this SBOM.)
         </component>
         <component bom-ref="simplicity_sdk:2025.6.3:device_init" type="library">
           <name>Automatic Device Initialization</name>
+          <version>2025.6.3</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.3:emlib_i2c" type="library">
+          <name>I2C</name>
           <version>2025.6.3</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -117,6 +127,16 @@ referenced in this SBOM.)
         </component>
         <component bom-ref="simplicity_sdk:2025.6.3:sl_rail_util_init" type="library">
           <name>SL RAIL Utility, Initialization</name>
+          <version>2025.6.3</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.3:sleeptimer" type="library">
+          <name>Sleep Timer</name>
           <version>2025.6.3</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -505,6 +525,16 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.3:emlib_burtc" type="library">
+          <name>BURTC</name>
+          <version>2025.6.3</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.3:emlib_syscfg" type="library">
           <name>SYSCFG</name>
           <version>2025.6.3</version>
@@ -665,8 +695,28 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.3:hal_sysrtc" type="library">
+          <name>SYSRTC</name>
+          <version>2025.6.3</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.3:iostream_uart_common" type="library">
           <name>IO Stream: Common code for UART-type streams</name>
+          <version>2025.6.3</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.3:emlib_timer" type="library">
+          <name>TIMER</name>
           <version>2025.6.3</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -747,46 +797,6 @@ referenced in this SBOM.)
         </component>
         <component bom-ref="simplicity_sdk:2025.6.3:gpio" type="library">
           <name>GPIO Driver</name>
-          <version>2025.6.3</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.3:sleeptimer" type="library">
-          <name>Sleep Timer</name>
-          <version>2025.6.3</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.3:emlib_burtc" type="library">
-          <name>BURTC</name>
-          <version>2025.6.3</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.3:hal_sysrtc" type="library">
-          <name>SYSRTC</name>
-          <version>2025.6.3</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.3:emlib_timer" type="library">
-          <name>TIMER</name>
           <version>2025.6.3</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
