@@ -258,14 +258,21 @@ static void s4a_rx_poll(void)
 
 #if FS_N >= 6
 /***************************************************************************//**
- * S6a — RF 수신 패킷 배출 (메인루프).
+ * S6a/S6b — RF 수신 패킷 배출 (메인루프). 태그는 FS_S6_CHANNEL 이 가른다.
  *
- *  ★완료조건: 감지기 리셋 1회 → wake ch101 에서 LINK_PING(0x24) 1개 수신 +
- *   crc pass. (step_config.h §S6 (3) 관측 대상 표)
+ *  ★완료조건 — **지금은 S6b** (FS_S6_CHANNEL=1, 짧은PA 80bit):
+ *    감지기 리셋 1회 → 데이터 ch1 에서 **STATUS_REPORT(0x11)** 수신 + crc pass.
+ *    ⚠ 판정은 STATUS_REPORT 로 한다. **LINK_PONG(0x25)은 감지기 2대**가 있어야
+ *      나오므로 시료 1대에서 미관측은 고장이 아니다. (step_config.h §S6 (3))
+ *    [원본 -- S6a(ch101, 롱PA 12000bit) 완료조건:
+ *      "감지기 리셋 1회 → wake ch101 에서 LINK_PING(0x24) 1개 수신 + crc pass"
+ *      → 2026-09-04 ALARM_FIRE/ALARM_STOP 실수신으로 **통과**]
  *
  *  ★출력 형식 — S7 파서 전이라 **hex 덤프까지**가 목표다:
- *    [S6a] #1 ch=101 rssi=-72 crc=PASS len=8  17 02 01 01 24 05 00 01
- *                                              ^len ^VER GRP SRC MSG SEQlo SEQhi HOP
+ *    [S6b] #1 ch=1 rssi=-72 crc=PASS len=24
+ *    [S6b]   0000: 17 02 01 01 11 04 00 04 A7 0B 00 00 00 00 80 00
+ *            ^len ^VER GRP SRC MSG SEQlo SEQhi HOP | payload 16B
+ *    ※STATUS_REPORT 는 LEN=0x17(23B) + len 바이트 = **len=24** 가 기대값이다.
  *
  *  ★패킷 바이트 배열: RAIL 은 **wire 그대로** 준다 → buf[0]=LEN, buf[1..]=본문.
  *   (감지기 drv_rf.c:337 확인. v1.1 헤더는 buf[1] 부터 시작한다)
@@ -330,7 +337,7 @@ static void s6_rx_poll(void)
     drained++;
 
     /* ---- 출력 ---- */
-    app_log("[S6a] #%lu ch=%u rssi=%d crc=%s len=%u%s\r\n",
+    app_log("[" S6_TAG "] #%lu ch=%u rssi=%d crc=%s len=%u%s\r\n",
             (unsigned long)s_s6_pkt_count,
             det_ok ? (unsigned)det.channel : (unsigned)FS_S6_CHANNEL,
             det_ok ? (int)det.rssi_dbm : 0,
@@ -350,7 +357,7 @@ static void s6_rx_poll(void)
         line[pos++] = ' ';
       }
       line[pos] = '\0';
-      app_log("[S6a]   %04u: %s\r\n", (unsigned)off, line);
+      app_log("[" S6_TAG "]   %04u: %s\r\n", (unsigned)off, line);
     }
   }
 
@@ -375,14 +382,14 @@ static void s6_rx_poll(void)
   if (drained > 0u) {
     sl_rail_status_t rst = sl_rail_start_rx(rail, (uint16_t)FS_S6_CHANNEL, NULL);
     if (rst != SL_RAIL_STATUS_NO_ERROR) {
-      app_log("[S6a] FAIL re-arm rx (status=0x%04X) -- 이후 수신 정지 가능\r\n",
+      app_log("[" S6_TAG "] FAIL re-arm rx (status=0x%04X) -- 이후 수신 정지 가능\r\n",
               (unsigned)rst);
     }
   }
 
   /* ISR 진입 수와 배출 수가 어긋나면 알린다 (조용한 유실 방지). */
   if (s_s6_evt_count != s_s6_pkt_count) {
-    app_log("[S6a] note evt=%lu pkt=%lu (차이 = 미배출/중복 이벤트)\r\n",
+    app_log("[" S6_TAG "] note evt=%lu pkt=%lu (차이 = 미배출/중복 이벤트)\r\n",
             (unsigned long)s_s6_evt_count,
             (unsigned long)s_s6_pkt_count);
   }

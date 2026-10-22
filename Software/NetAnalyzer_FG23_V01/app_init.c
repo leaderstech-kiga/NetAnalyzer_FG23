@@ -468,13 +468,13 @@ void rail_app_init(void)
         };
         sl_rail_status_t trst = sl_rail_set_rx_transitions(rail, &rxtr);
 
-        app_log("[S6a] rx_transitions success=RX error=RX %s\r\n",
+        app_log("[" S6_TAG "] rx_transitions success=RX error=RX %s\r\n",
                 (trst == SL_RAIL_STATUS_NO_ERROR) ? "OK" : "FAIL");
 
         if (trst != SL_RAIL_STATUS_NO_ERROR) {
           /* (a) 실패해도 (b) fallback 이 있으므로 치명적이지 않다.
            *  다만 연속 수신 성능이 떨어지므로 명시해 둔다. */
-          app_log("[S6a] warn: 자동 재무장 실패 -- poll 재무장(fallback)에 의존\r\n");
+          app_log("[" S6_TAG "] warn: 자동 재무장 실패 -- poll 재무장(fallback)에 의존\r\n");
         }
       }
 
@@ -485,7 +485,7 @@ void rail_app_init(void)
                                                (uint16_t)FS_S6_CHANNEL,
                                                NULL);
 
-      app_log("[S6a] start_rx ch=%u %s  (crc_err_show=%d)\r\n",
+      app_log("[" S6_TAG "] start_rx ch=%u %s  (crc_err_show=%d)\r\n",
               (unsigned)FS_S6_CHANNEL,
               (rxst == SL_RAIL_STATUS_NO_ERROR) ? "OK" : "FAIL",
               (int)FS_S6_CRC_ERR_SHOW);
@@ -493,10 +493,10 @@ void rail_app_init(void)
       if (rxst != SL_RAIL_STATUS_NO_ERROR) {
         /* 여기서 실패하면 수신은 시작도 안 된 것이다. 이후 "무출력" 을
          *  전파 문제로 오진하지 않도록 상태를 명시한다. */
-        app_log("[S6a] FAIL rx not armed (status=0x%04X) "
+        app_log("[" S6_TAG "] FAIL rx not armed (status=0x%04X) "
                 "-- 채널/PHY 설정부터 확인\r\n", (unsigned)rxst);
       } else {
-        app_log("[S6a] listening... "
+        app_log("[" S6_TAG "] listening... "
                 "(감지기 DIP: GROUP=1 / NODE=1 확인 후 리셋)\r\n");
       }
 #endif
