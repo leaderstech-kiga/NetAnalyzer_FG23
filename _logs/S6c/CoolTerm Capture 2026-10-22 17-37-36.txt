@@ -1,0 +1,245 @@
+[S1] tick=992
+[S11a] t=991510ms vpack=11604mV vsys=11603mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AAA c=FD64
+[S1] tick=993
+[S11a] t=992510ms vpack=11600mV vsys=11599mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5AA2 c=FD68
+[S1] tick=994
+[S11a] t=993510ms vpack=11604mV vsys=11603mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AAA c=FD5C
+[S1] tick=995
+[S11a] t=994510ms vpack=11604mV vsys=11603mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AAA c=FD64
+[S1] tick=996
+[S11a] t=995510ms vpack=11604mV vsys=11603mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AAA c=FD64
+[S1] tick=997
+[S11a] t=996510ms vpack=11604mV vsys=11603mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AAA c=FD60
+[S1] tick=998
+[S11a] t=997510ms vpack=11600mV vsys=11599mV i=-00171mA shunt=-1710uV (DIS) raw s=FF55 b=5AA2 c=FD54
+[S1] tick=999
+[S11a] t=998510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1000
+[S11a] t=999510ms vpack=11600mV vsys=11599mV i=-00171mA shunt=-1710uV (DIS) raw s=FF55 b=5AA2 c=FD54
+[S1] tick=1001
+[S11a] t=1000510ms vpack=11600mV vsys=11599mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5AA2 c=FD68
+[S1] tick=1002
+[S11a] t=1001510ms vpack=11600mV vsys=11599mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5AA2 c=FD68
+[S1] tick=1003
+[S11a] t=1002510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1004
+[S6b] #41 ch=1 rssi=-45 crc=PASS len=8
+[S6b]   0000: 07 02 01 01 24 01 00 01 
+[S11a] t=1003510ms vpack=11600mV vsys=11599mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5AA2 c=FD58
+[S1] tick=1005
+[S11a] t=1004510ms vpack=11600mV vsys=11599mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5AA2 c=FD58
+[S1] tick=1006
+[S11a] t=1005510ms vpack=11604mV vsys=11603mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5AAA c=FD58
+[S1] tick=1007
+[S11a] t=1006510ms vpack=11600mV vsys=11599mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5AA2 c=FD58
+[S1] tick=1008
+[S11a] t=1007510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S1] tick=1009
+[S11a] t=1008510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S1] tick=1010
+[S11a] t=1009510ms vpack=11600mV vsys=11599mV i=-00171mA shunt=-1710uV (DIS) raw s=FF55 b=5AA2 c=FD68
+[S1] tick=1011
+[S11a] t=1010510ms vpack=11600mV vsys=11599mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5AA2 c=FD68
+[S1] tick=1012
+[S11a] t=1011510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1013
+[S11a] t=1012510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1014
+[S11a] t=1013510ms vpack=11600mV vsys=11599mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5AA2 c=FD58
+[S1] tick=1015
+[S11a] t=1014510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S1] tick=1016
+[S11a] t=1015510ms vpack=11600mV vsys=11599mV i=-00185mA shunt=-1850uV (DIS) raw s=FF47 b=5AA2 c=FD1C
+[S1] tick=1017
+[S11a] t=1016510ms vpack=11600mV vsys=11599mV i=-00176mA shunt=-1760uV (DIS) raw s=FF50 b=5AA2 c=FD40
+[S1] tick=1018
+[S6b] #42 ch=1 rssi=-50 crc=PASS len=24
+[S6b]   0000: 17 02 01 01 11 02 00 04 07 0C 00 00 00 00 80 FF 
+[S6b]   0016: FF 00 80 FF FF FF FF 00 
+[S11a] t=1017510ms vpack=11600mV vsys=11599mV i=-00193mA shunt=-1930uV (DIS) raw s=FF3F b=5AA2 c=FCFC
+[S1] tick=1019
+[S11a] t=1018510ms vpack=11588mV vsys=11587mV i=-00171mA shunt=-1710uV (DIS) raw s=FF55 b=5A8A c=FD54
+[S1] tick=1020
+[S11a] t=1019510ms vpack=11600mV vsys=11599mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5AA2 c=FD68
+[S1] tick=1021
+[S11a] t=1020510ms vpack=11600mV vsys=11599mV i=-00199mA shunt=-1990uV (DIS) raw s=FF39 b=5AA2 c=FCE4
+[S1] tick=1022
+[S11a] t=1021510ms vpack=11588mV vsys=11587mV i=-00194mA shunt=-1940uV (DIS) raw s=FF3E b=5A8A c=FCF8
+[S1] tick=1023
+[S11a] t=1022510ms vpack=11592mV vsys=11591mV i=-00197mA shunt=-1970uV (DIS) raw s=FF3B b=5A92 c=FCEC
+[S1] tick=1024
+[S11a] t=1023510ms vpack=11600mV vsys=11598mV i=-00228mA shunt=-2280uV (DIS) raw s=FF1C b=5AA2 c=FC70
+[S1] tick=1025
+[S11a] t=1024510ms vpack=11592mV vsys=11591mV i=-00186mA shunt=-1860uV (DIS) raw s=FF46 b=5A92 c=FD18
+[S1] tick=1026
+[S11a] t=1025510ms vpack=11592mV vsys=11591mV i=-00187mA shunt=-1870uV (DIS) raw s=FF45 b=5A92 c=FD14
+[S1] tick=1027
+[S11a] t=1026510ms vpack=11600mV vsys=11598mV i=-00226mA shunt=-2260uV (DIS) raw s=FF1E b=5AA2 c=FC78
+[S1] tick=1028
+[S11a] t=1027510ms vpack=11592mV vsys=11591mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5A92 c=FD60
+[S1] tick=1029
+[S11a] t=1028510ms vpack=11588mV vsys=11587mV i=-00177mA shunt=-1770uV (DIS) raw s=FF4F b=5A8A c=FD3C
+[S6b] #43 ch=1 rssi=-64 crc=PASS len=8
+[S6b]   0000: 07 02 01 01 24 01 00 01 
+[S1] tick=1030
+[S11a] t=1029510ms vpack=11600mV vsys=11598mV i=-00222mA shunt=-2220uV (DIS) raw s=FF22 b=5AA2 c=FC88
+[S1] tick=1031
+[S11a] t=1030510ms vpack=11592mV vsys=11591mV i=-00191mA shunt=-1910uV (DIS) raw s=FF41 b=5A92 c=FD04
+[S1] tick=1032
+[S11a] t=1031510ms vpack=11600mV vsys=11599mV i=-00172mA shunt=-1720uV (DIS) raw s=FF54 b=5AA2 c=FD50
+[S1] tick=1033
+[S11a] t=1032510ms vpack=11600mV vsys=11599mV i=-00164mA shunt=-1640uV (DIS) raw s=FF5C b=5AA2 c=FD70
+[S1] tick=1034
+[S11a] t=1033510ms vpack=11596mV vsys=11595mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5A9A c=FD60
+[S1] tick=1035
+[S11a] t=1034510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1036
+[S11a] t=1035510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1037
+[S11a] t=1036510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1038
+[S11a] t=1037510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1039
+[S11a] t=1038510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1040
+[S11a] t=1039510ms vpack=11600mV vsys=11599mV i=-00164mA shunt=-1640uV (DIS) raw s=FF5C b=5AA2 c=FD70
+[S1] tick=1041
+[S11a] t=1040510ms vpack=11600mV vsys=11599mV i=-00164mA shunt=-1640uV (DIS) raw s=FF5C b=5AA2 c=FD70
+[S1] tick=1042
+[S11a] t=1041510ms vpack=11600mV vsys=11599mV i=-00164mA shunt=-1640uV (DIS) raw s=FF5C b=5AA2 c=FD70
+[S1] tick=1043
+[S11a] t=1042510ms vpack=11600mV vsys=11599mV i=-00164mA shunt=-1640uV (DIS) raw s=FF5C b=5AA2 c=FD70
+[S6b] #44 ch=1 rssi=-47 crc=PASS len=24
+[S6b]   0000: 17 02 01 01 11 02 00 04 05 0C 00 00 00 00 80 FF 
+[S6b]   0016: FF 00 80 FF FF FF FF 00 
+[S1] tick=1044
+[S11a] t=1043510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1045
+[S11a] t=1044510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1046
+[S11a] t=1045510ms vpack=11596mV vsys=11595mV i=-00178mA shunt=-1780uV (DIS) raw s=FF4E b=5A9A c=FD38
+[S1] tick=1047
+[S11a] t=1046510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1048
+[S11a] t=1047510ms vpack=11596mV vsys=11595mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5A9A c=FD64
+[S1] tick=1049
+[S11a] t=1048510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1050
+[S11a] t=1049510ms vpack=11600mV vsys=11599mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5AA2 c=FD68
+[S1] tick=1051
+[S11a] t=1050510ms vpack=11600mV vsys=11599mV i=-00165mA shunt=-1650uV (DIS) raw s=FF5B b=5AA2 c=FD6C
+[S1] tick=1052
+[S11a] t=1051510ms vpack=11600mV vsys=11599mV i=-00165mA shunt=-1650uV (DIS) raw s=FF5B b=5AA2 c=FD6C
+[S1] tick=1053
+[S11a] t=1052510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1054
+[S11a] t=1053510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1055
+[S11a] t=1054510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1056
+[S6b] #45 ch=1 rssi=-43 crc=PASS len=8
+[S6b]   0000: 07 02 01 01 24 01 00 01 
+[S11a] t=1055510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1057
+[S11a] t=1056510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1058
+[S11a] t=1057510ms vpack=11600mV vsys=11599mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5AA2 c=FD68
+[S1] tick=1059
+[S11a] t=1058510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S1] tick=1060
+[S11a] t=1059510ms vpack=11600mV vsys=11599mV i=-00165mA shunt=-1650uV (DIS) raw s=FF5B b=5AA2 c=FD6C
+[S1] tick=1061
+[S11a] t=1060510ms vpack=11600mV vsys=11599mV i=-00165mA shunt=-1650uV (DIS) raw s=FF5B b=5AA2 c=FD6C
+[S1] tick=1062
+[S11a] t=1061510ms vpack=11600mV vsys=11599mV i=-00164mA shunt=-1640uV (DIS) raw s=FF5C b=5AA2 c=FD70
+[S1] tick=1063
+[S11a] t=1062510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1064
+[S11a] t=1063510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1065
+[S11a] t=1064510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1066
+[S11a] t=1065510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1067
+[S11a] t=1066510ms vpack=11600mV vsys=11599mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5AA2 c=FD58
+[S1] tick=1068
+[S11a] t=1067510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1069
+[S11a] t=1068510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1070
+[S6b] #46 ch=1 rssi=-43 crc=PASS len=24
+[S6b]   0000: 17 02 01 01 11 02 00 04 03 0C 00 00 00 00 80 FF 
+[S6b]   0016: FF 00 80 FF FF FF FF 00 
+[S11a] t=1069510ms vpack=11600mV vsys=11599mV i=-00165mA shunt=-1650uV (DIS) raw s=FF5B b=5AA2 c=FD6C
+[S1] tick=1071
+[S11a] t=1070510ms vpack=11600mV vsys=11599mV i=-00164mA shunt=-1640uV (DIS) raw s=FF5C b=5AA2 c=FD70
+[S1] tick=1072
+[S11a] t=1071510ms vpack=11600mV vsys=11599mV i=-00165mA shunt=-1650uV (DIS) raw s=FF5B b=5AA2 c=FD6C
+[S1] tick=1073
+[S11a] t=1072510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1074
+[S11a] t=1073510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1075
+[S11a] t=1074510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1076
+[S11a] t=1075510ms vpack=11596mV vsys=11595mV i=-00174mA shunt=-1740uV (DIS) raw s=FF52 b=5A9A c=FD48
+[S1] tick=1077
+[S11a] t=1076510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S1] tick=1078
+[S11a] t=1077510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S1] tick=1079
+[S11a] t=1078510ms vpack=11600mV vsys=11599mV i=-00173mA shunt=-1730uV (DIS) raw s=FF53 b=5AA2 c=FD4C
+[S1] tick=1080
+[S11a] t=1079510ms vpack=11600mV vsys=11599mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5AA2 c=FD68
+[S1] tick=1081
+[S11a] t=1080510ms vpack=11600mV vsys=11599mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5AA2 c=FD64
+[S1] tick=1082
+[S6b] #47 ch=1 rssi=-53 crc=PASS len=8
+[S6b]   0000: 07 02 01 01 24 01 00 01 
+[S11a] t=1081510ms vpack=11600mV vsys=11599mV i=-00171mA shunt=-1710uV (DIS) raw s=FF55 b=5AA2 c=FD54
+[S1] tick=1083
+[S11a] t=1082510ms vpack=11600mV vsys=11599mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5AA2 c=FD58
+[S1] tick=1084
+[S11a] t=1083510ms vpack=11600mV vsys=11599mV i=-00168mA shunt=-1680uV (DIS) raw s=FF58 b=5AA2 c=FD60
+[S1] tick=1085
+[S11a] t=1084510ms vpack=11600mV vsys=11599mV i=-00172mA shunt=-1720uV (DIS) raw s=FF54 b=5AA2 c=FD50
+[S1] tick=1086
+[S11a] t=1085510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S1] tick=1087
+[S11a] t=1086510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S1] tick=1088
+[S11a] t=1087510ms vpack=11600mV vsys=11599mV i=-00171mA shunt=-1710uV (DIS) raw s=FF55 b=5AA2 c=FD54
+[S1] tick=1089
+[S11a] t=1088510ms vpack=11596mV vsys=11595mV i=-00174mA shunt=-1740uV (DIS) raw s=FF52 b=5A9A c=FD48
+[S1] tick=1090
+[S11a] t=1089510ms vpack=11596mV vsys=11595mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5A9A c=FD64
+[S1] tick=1091
+[S11a] t=1090510ms vpack=11600mV vsys=11599mV i=-00186mA shunt=-1860uV (DIS) raw s=FF46 b=5AA2 c=FD18
+[S1] tick=1092
+[S11a] t=1091510ms vpack=11600mV vsys=11599mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5AA2 c=FD68
+[S1] tick=1093
+[S11a] t=1092510ms vpack=11596mV vsys=11595mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5A9A c=FD5C
+[S1] tick=1094
+[S11a] t=1093510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S1] tick=1095
+[S11a] t=1094510ms vpack=11596mV vsys=11595mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5A9A c=FD58
+[S1] tick=1096
+[S11a] t=1095510ms vpack=11600mV vsys=11599mV i=-00169mA shunt=-1690uV (DIS) raw s=FF57 b=5AA2 c=FD5C
+[S6b] #48 ch=1 rssi=-53 crc=PASS len=24
+[S6b]   0000: 17 02 01 01 11 02 00 04 FF 0B 00 00 00 00 80 FF 
+[S6b]   0016: FF 00 80 FF FF FF FF 00 
+[S1] tick=1097
+[S11a] t=1096510ms vpack=11600mV vsys=11599mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5AA2 c=FD58
+[S1] tick=1098
+[S11a] t=1097510ms vpack=11596mV vsys=11595mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5A9A c=FD58
+[S1] tick=1099
+[S11a] t=1098510ms vpack=11596mV vsys=11595mV i=-00173mA shunt=-1730uV (DIS) raw s=FF53 b=5A9A c=FD4C
+[S1] tick=1100
+[S11a] t=1099510ms vpack=11592mV vsys=11591mV i=-00167mA shunt=-1670uV (DIS) raw s=FF59 b=5A92 c=FD64
+[S1] tick=1101
+[S11a] t=1100510ms vpack=11596mV vsys=11595mV i=-00166mA shunt=-1660uV (DIS) raw s=FF5A b=5A9A c=FD68
+[S1] tick=1102
+[S11a] t=1101510ms vpack=11592mV vsys=11591mV i=-00177mA shunt=-1770uV (DIS) raw s=FF4F b=5A92 c=FD3C
+[S1] tick=1103
+[S11a] t=1102510ms vpack=11592mV vsys=11591mV i=-00170mA shunt=-1700uV (DIS) raw s=FF56 b=5A92 c=FD58
+[S1] tick=1104

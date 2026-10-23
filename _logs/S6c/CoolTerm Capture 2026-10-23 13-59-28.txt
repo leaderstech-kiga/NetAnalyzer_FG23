@@ -1,0 +1,927 @@
+HHÿlh	ÿÿ[S11a] t=54510ms vpack=12616mV vsys=12616mV i=+00049mA shunt=+490uV (CHG) raw s=0031 b=6292 c=00C4
+[S1] tick=56
+[S11a] t=55510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=57
+[S11a] t=56510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=58
+[S11a] t=57510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=59
+[S11a] t=58510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=60
+[S11a] t=59510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=61
+[S11a] t=60510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=62
+[S11a] t=61510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=63
+[S11a] t=62510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=64
+[S11a] t=63510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=65
+[S11a] t=64510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=66
+[S6a] #3 ch=101 rssi=-58 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 03 00 04 02 
+[S11a] t=65510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=67
+[S11a] t=66510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=68
+[S11a] t=67510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=69
+[S11a] t=68510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=70
+[S11a] t=69510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=71
+[S11a] t=70510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=72
+[S11a] t=71510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=73
+[S11a] t=72510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=74
+[S11a] t=73510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=75
+[S11a] t=74510ms vpack=12616mV vsys=12616mV i=+00049mA shunt=+490uV (CHG) raw s=0031 b=6292 c=00C4
+[S1] tick=76
+[S11a] t=75510ms vpack=12616mV vsys=12616mV i=+00049mA shunt=+490uV (CHG) raw s=0031 b=6292 c=00C4
+[S1] tick=77
+[S11a] t=76510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=78
+[S11a] t=77510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=79
+[S11a] t=78510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=80
+[S11a] t=79510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=81
+[S11a] t=80510ms vpack=12620mV vsys=12620mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=629A c=00BC
+[S1] tick=82
+[S11a] t=81510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=83
+[S11a] t=82510ms vpack=12616mV vsys=12616mV i=+00039mA shunt=+390uV (CHG) raw s=0027 b=6292 c=009C
+[S6a] #4 ch=101 rssi=-56 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 04 00 04 02 
+[S1] tick=84
+[S11a] t=83510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=85
+[S11a] t=84510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=86
+[S11a] t=85510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=87
+[S11a] t=86510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=88
+[S11a] t=87510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=89
+[S11a] t=88510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=90
+[S11a] t=89510ms vpack=12616mV vsys=12616mV i=+00038mA shunt=+380uV (CHG) raw s=0026 b=6292 c=0098
+[S1] tick=91
+[S11a] t=90510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=92
+[S11a] t=91510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=93
+[S11a] t=92510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=94
+[S11a] t=93510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=95
+[S11a] t=94510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=96
+[S11a] t=95510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=97
+[S11a] t=96510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=98
+[S11a] t=97510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=99
+[S11a] t=98510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S6a] #5 ch=101 rssi=-61 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 05 00 04 02 
+[S1] tick=100
+[S11a] t=99510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=101
+[S11a] t=100510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=102
+[S11a] t=101510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=103
+[S11a] t=102510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=104
+[S11a] t=103510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=105
+[S11a] t=104510ms vpack=12616mV vsys=12616mV i=+00031mA shunt=+310uV (CHG) raw s=001F b=6292 c=007C
+[S1] tick=106
+[S11a] t=105510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=107
+[S11a] t=106510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=108
+[S11a] t=107510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=109
+[S11a] t=108510ms vpack=12616mV vsys=12616mV i=+00041mA shunt=+410uV (CHG) raw s=0029 b=6292 c=00A4
+[S1] tick=110
+[S11a] t=109510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=111
+[S11a] t=110510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=112
+[S11a] t=111510ms vpack=12616mV vsys=12616mV i=+00034mA shunt=+340uV (CHG) raw s=0022 b=6292 c=0088
+[S1] tick=113
+[S11a] t=112510ms vpack=12612mV vsys=12612mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=628A c=00B0
+[S1] tick=114
+[S11a] t=113510ms vpack=12616mV vsys=12616mV i=+00012mA shunt=+120uV (CHG) raw s=000C b=6292 c=0030
+[S1] tick=115
+[S11a] t=114510ms vpack=12616mV vsys=12616mV i=+00029mA shunt=+290uV (CHG) raw s=001D b=6292 c=0074
+[S1] tick=116
+[S11a] t=115510ms vpack=12608mV vsys=12608mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6282 c=00B8
+[S1] tick=117
+[S6a] #6 ch=101 rssi=-58 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 06 00 04 02 
+[S11a] t=116510ms vpack=12608mV vsys=12608mV i=+00003mA shunt=+30uV (CHG) raw s=0003 b=6282 c=000C
+[S1] tick=118
+[S11a] t=117510ms vpack=12612mV vsys=12612mV i=+00021mA shunt=+210uV (CHG) raw s=0015 b=628A c=0054
+[S1] tick=119
+[S11a] t=118510ms vpack=12608mV vsys=12608mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6282 c=00AC
+[S1] tick=120
+[S11a] t=119510ms vpack=12612mV vsys=12612mV i=+00013mA shunt=+130uV (CHG) raw s=000D b=628A c=0034
+[S1] tick=121
+[S11a] t=120510ms vpack=12616mV vsys=12616mV i=+00014mA shunt=+140uV (CHG) raw s=000E b=6292 c=0038
+[S1] tick=122
+[S11a] t=121510ms vpack=12608mV vsys=12608mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6282 c=00B8
+[S1] tick=123
+[S11a] t=122510ms vpack=12620mV vsys=12620mV i=+00025mA shunt=+250uV (CHG) raw s=0019 b=629A c=0064
+[S1] tick=124
+[S11a] t=123510ms vpack=12616mV vsys=12616mV i=+00012mA shunt=+120uV (CHG) raw s=000C b=6292 c=0030
+[S1] tick=125
+[S11a] t=124510ms vpack=12612mV vsys=12612mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=628A c=00C0
+[S1] tick=126
+[S11a] t=125510ms vpack=12616mV vsys=12616mV i=+00035mA shunt=+350uV (CHG) raw s=0023 b=6292 c=008C
+[S1] tick=127
+[S11a] t=126510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=128
+[S11a] t=127510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=129
+[S11a] t=128510ms vpack=12616mV vsys=12616mV i=+00039mA shunt=+390uV (CHG) raw s=0027 b=6292 c=009C
+[S1] tick=130
+[S11a] t=129510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=131
+[S11a] t=130510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=132
+[S11a] t=131510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=133
+[S11a] t=132510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=134
+[S6a] #7 ch=101 rssi=-58 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 07 00 04 02 
+[S11a] t=133510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=135
+[S11a] t=134510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=136
+[S11a] t=135510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=137
+[S11a] t=136510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=138
+[S11a] t=137510ms vpack=12616mV vsys=12616mV i=+00040mA shunt=+400uV (CHG) raw s=0028 b=6292 c=00A0
+[S1] tick=139
+[S11a] t=138510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=140
+[S11a] t=139510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=141
+[S11a] t=140510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=142
+[S11a] t=141510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=143
+[S11a] t=142510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=144
+[S11a] t=143510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=145
+[S11a] t=144510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=146
+[S11a] t=145510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=147
+[S11a] t=146510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=148
+[S11a] t=147510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=149
+[S11a] t=148510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=150
+[S11a] t=149510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=151
+[S11a] t=150510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=152
+[S11a] t=151510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=153
+[S11a] t=152510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=154
+[S11a] t=153510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=155
+[S11a] t=154510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=156
+[S11a] t=155510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=157
+[S11a] t=156510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=158
+[S11a] t=157510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=159
+[S11a] t=158510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=160
+[S6a] #8 ch=101 rssi=-56 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 08 00 04 02 
+[S11a] t=159510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=161
+[S11a] t=160510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=162
+[S11a] t=161510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=163
+[S11a] t=162510ms vpack=12616mV vsys=12616mV i=+00039mA shunt=+390uV (CHG) raw s=0027 b=6292 c=009C
+[S1] tick=164
+[S11a] t=163510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=165
+[S11a] t=164510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=166
+[S11a] t=165510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=167
+[S11a] t=166510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=168
+[S11a] t=167510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=169
+[S11a] t=168510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=170
+[S11a] t=169510ms vpack=12620mV vsys=12620mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=629A c=00BC
+[S1] tick=171
+[S11a] t=170510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=172
+[S11a] t=171510ms vpack=12620mV vsys=12620mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=629A c=00BC
+[S1] tick=173
+[S11a] t=172510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=174
+[S11a] t=173510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=175
+[S11a] t=174510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00BC
+[S1] tick=176
+[S11a] t=175510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=177
+[S11a] t=176510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=178
+[S11a] t=177510ms vpack=12616mV vsys=12616mV i=+00034mA shunt=+340uV (CHG) raw s=0022 b=6292 c=0088
+[S1] tick=179
+[S6a] #9 ch=101 rssi=-59 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 09 00 04 02 
+[S11a] t=178510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=180
+[S11a] t=179510ms vpack=12616mV vsys=12616mV i=+00042mA shunt=+420uV (CHG) raw s=002A b=6292 c=00A8
+[S1] tick=181
+[S11a] t=180510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=182
+[S11a] t=181510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=183
+[S11a] t=182510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=184
+[S11a] t=183510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=185
+[S11a] t=184510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=186
+[S11a] t=185510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=187
+[S11a] t=186510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=188
+[S11a] t=187510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=189
+[S11a] t=188510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=190
+[S11a] t=189510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=191
+[S11a] t=190510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=192
+[S11a] t=191510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=193
+[S11a] t=192510ms vpack=12616mV vsys=12616mV i=+00038mA shunt=+380uV (CHG) raw s=0026 b=6292 c=0098
+[S1] tick=194
+[S11a] t=193510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=195
+[S11a] t=194510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=196
+[S11a] t=195510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=197
+[S11a] t=196510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=198
+[S11a] t=197510ms vpack=12616mV vsys=12616mV i=-00006mA shunt=-60uV (DIS) raw s=FFFA b=6292 c=FFE8
+[S1] tick=199
+[S11a] t=198510ms vpack=12616mV vsys=12616mV i=+00027mA shunt=+270uV (CHG) raw s=001B b=6292 c=006C
+[S1] tick=200
+[S11a] t=199510ms vpack=12612mV vsys=12612mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=628A c=00B4
+[S1] tick=201
+[S11a] t=200510ms vpack=12616mV vsys=12616mV i=+00011mA shunt=+110uV (CHG) raw s=000B b=6292 c=002C
+[S1] tick=202
+[S11a] t=201510ms vpack=12612mV vsys=12612mV i=+00033mA shunt=+330uV (CHG) raw s=0021 b=628A c=0084
+[S1] tick=203
+[S11a] t=202510ms vpack=12612mV vsys=12612mV i=+00033mA shunt=+330uV (CHG) raw s=0021 b=628A c=0084
+[S1] tick=204
+[S11a] t=203510ms vpack=12616mV vsys=12616mV i=+00013mA shunt=+130uV (CHG) raw s=000D b=6292 c=0034
+[S1] tick=205
+[S11a] t=204510ms vpack=12612mV vsys=12612mV i=+00028mA shunt=+280uV (CHG) raw s=001C b=628A c=0070
+[S1] tick=206
+[S11a] t=205510ms vpack=12608mV vsys=12608mV i=+00040mA shunt=+400uV (CHG) raw s=0028 b=6282 c=00A0
+[S1] tick=207
+[S11a] t=206510ms vpack=12616mV vsys=12616mV i=+00012mA shunt=+120uV (CHG) raw s=000C b=6292 c=0030
+[S1] tick=208
+[S11a] t=207510ms vpack=12612mV vsys=12612mV i=+00013mA shunt=+130uV (CHG) raw s=000D b=628A c=0034
+[S1] tick=209
+[S6a] #10 ch=101 rssi=-52 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 0A 00 04 02 
+[S11a] t=208510ms vpack=12608mV vsys=12608mV i=+00042mA shunt=+420uV (CHG) raw s=002A b=6282 c=00A8
+[S1] tick=210
+[S11a] t=209510ms vpack=12620mV vsys=12620mV i=+00019mA shunt=+190uV (CHG) raw s=0013 b=629A c=004C
+[S1] tick=211
+[S11a] t=210510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=212
+[S11a] t=211510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=213
+[S11a] t=212510ms vpack=12616mV vsys=12616mV i=+00028mA shunt=+280uV (CHG) raw s=001C b=6292 c=0070
+[S1] tick=214
+[S11a] t=213510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=215
+[S11a] t=214510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=216
+[S11a] t=215510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=217
+[S11a] t=216510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=218
+[S11a] t=217510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=219
+[S11a] t=218510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=220
+[S11a] t=219510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=221
+[S11a] t=220510ms vpack=12620mV vsys=12620mV i=+00039mA shunt=+390uV (CHG) raw s=0027 b=629A c=009C
+[S1] tick=222
+[S11a] t=221510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=223
+[S11a] t=222510ms vpack=12616mV vsys=12616mV i=+00031mA shunt=+310uV (CHG) raw s=001F b=6292 c=007C
+[S1] tick=224
+[S11a] t=223510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=225
+[S11a] t=224510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=226
+[S11a] t=225510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=227
+[S6a] #11 ch=101 rssi=-55 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 0B 00 04 02 
+[S11a] t=226510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=228
+[S11a] t=227510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=229
+[S11a] t=228510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=230
+[S11a] t=229510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=231
+[S11a] t=230510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=232
+[S11a] t=231510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=233
+[S11a] t=232510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=234
+[S11a] t=233510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=235
+[S11a] t=234510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=236
+[S11a] t=235510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=237
+[S11a] t=236510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=238
+[S11a] t=237510ms vpack=12616mV vsys=12616mV i=+00041mA shunt=+410uV (CHG) raw s=0029 b=6292 c=00A4
+[S1] tick=239
+[S11a] t=238510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=240
+[S11a] t=239510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=241
+[S11a] t=240510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=242
+[S11a] t=241510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=243
+[S11a] t=242510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S6a] #12 ch=101 rssi=-58 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 0C 00 04 02 
+[S1] tick=244
+[S11a] t=243510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=245
+[S11a] t=244510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=246
+[S11a] t=245510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=247
+[S11a] t=246510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=248
+[S11a] t=247510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=249
+[S11a] t=248510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=250
+[S11a] t=249510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=251
+[S11a] t=250510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=252
+[S11a] t=251510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=253
+[S11a] t=252510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=254
+[S11a] t=253510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=255
+[S11a] t=254510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=256
+[S11a] t=255510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=257
+[S11a] t=256510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=258
+[S11a] t=257510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=259
+[S11a] t=258510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=260
+[S11a] t=259510ms vpack=12620mV vsys=12620mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=629A c=00BC
+[S1] tick=261
+[S6a] #13 ch=101 rssi=-55 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 0D 00 04 02 
+[S11a] t=260510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=262
+[S11a] t=261510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=263
+[S11a] t=262510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=264
+[S11a] t=263510ms vpack=12616mV vsys=12616mV i=+00034mA shunt=+340uV (CHG) raw s=0022 b=6292 c=0088
+[S1] tick=265
+[S11a] t=264510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=266
+[S11a] t=265510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=267
+[S11a] t=266510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=268
+[S11a] t=267510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=269
+[S11a] t=268510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=270
+[S11a] t=269510ms vpack=12620mV vsys=12620mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=629A c=00B4
+[S1] tick=271
+[S11a] t=270510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=272
+[S11a] t=271510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=273
+[S11a] t=272510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=274
+[S11a] t=273510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=275
+[S11a] t=274510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=276
+[S11a] t=275510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=277
+[S11a] t=276510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=278
+[S11a] t=277510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=279
+[S11a] t=278510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=280
+[S11a] t=279510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S6a] #14 ch=101 rssi=-56 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 0E 00 04 02 
+[S1] tick=281
+[S11a] t=280510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=282
+[S11a] t=281510ms vpack=12616mV vsys=12616mV i=+00037mA shunt=+370uV (CHG) raw s=0025 b=6292 c=0094
+[S1] tick=283
+[S11a] t=282510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=284
+[S11a] t=283510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=285
+[S11a] t=284510ms vpack=12616mV vsys=12616mV i=+00033mA shunt=+330uV (CHG) raw s=0021 b=6292 c=0084
+[S1] tick=286
+[S11a] t=285510ms vpack=12612mV vsys=12612mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=628A c=00B4
+[S1] tick=287
+[S11a] t=286510ms vpack=12612mV vsys=12612mV i=+00021mA shunt=+210uV (CHG) raw s=0015 b=628A c=0054
+[S1] tick=288
+[S11a] t=287510ms vpack=12616mV vsys=12616mV i=+00014mA shunt=+140uV (CHG) raw s=000E b=6292 c=0038
+[S1] tick=289
+[S11a] t=288510ms vpack=12612mV vsys=12612mV i=+00033mA shunt=+330uV (CHG) raw s=0021 b=628A c=0084
+[S1] tick=290
+[S11a] t=289510ms vpack=12612mV vsys=12612mV i=+00024mA shunt=+240uV (CHG) raw s=0018 b=628A c=0060
+[S1] tick=291
+[S11a] t=290510ms vpack=12616mV vsys=12616mV i=+00008mA shunt=+80uV (CHG) raw s=0008 b=6292 c=0020
+[S1] tick=292
+[S11a] t=291510ms vpack=12608mV vsys=12608mV i=+00037mA shunt=+370uV (CHG) raw s=0025 b=6282 c=0094
+[S1] tick=293
+[S11a] t=292510ms vpack=12612mV vsys=12612mV i=+00033mA shunt=+330uV (CHG) raw s=0021 b=628A c=0084
+[S1] tick=294
+[S11a] t=293510ms vpack=12616mV vsys=12616mV i=+00012mA shunt=+120uV (CHG) raw s=000C b=6292 c=0030
+[S1] tick=295
+[S11a] t=294510ms vpack=12612mV vsys=12612mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=628A c=00B8
+[S1] tick=296
+[S11a] t=295510ms vpack=12616mV vsys=12616mV i=+00023mA shunt=+230uV (CHG) raw s=0017 b=6292 c=005C
+[S1] tick=297
+[S11a] t=296510ms vpack=12616mV vsys=12616mV i=+00013mA shunt=+130uV (CHG) raw s=000D b=6292 c=0034
+[S1] tick=298
+[S11a] t=297510ms vpack=12616mV vsys=12616mV i=+00042mA shunt=+420uV (CHG) raw s=002A b=6292 c=00A8
+[S1] tick=299
+[S11a] t=298510ms vpack=12616mV vsys=12616mV i=+00042mA shunt=+420uV (CHG) raw s=002A b=6292 c=00A8
+[S1] tick=300
+[S11a] t=299510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S6a] #15 ch=101 rssi=-60 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 0F 00 04 02 
+[S1] tick=301
+[S11a] t=300510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=302
+[S11a] t=301510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=303
+[S11a] t=302510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=304
+[S11a] t=303510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=305
+[S11a] t=304510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=306
+[S11a] t=305510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=307
+[S11a] t=306510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=308
+[S11a] t=307510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=309
+[S11a] t=308510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=310
+[S11a] t=309510ms vpack=12620mV vsys=12620mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=629A c=00AC
+[S1] tick=311
+[S11a] t=310510ms vpack=12616mV vsys=12616mV i=+00039mA shunt=+390uV (CHG) raw s=0027 b=6292 c=009C
+[S1] tick=312
+[S11a] t=311510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=313
+[S11a] t=312510ms vpack=12616mV vsys=12616mV i=+00042mA shunt=+420uV (CHG) raw s=002A b=6292 c=00A8
+[S1] tick=314
+[S11a] t=313510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=315
+[S11a] t=314510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=316
+[S11a] t=315510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=317
+[S11a] t=316510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=318
+[S11a] t=317510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=319
+[S11a] t=318510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=320
+[S11a] t=319510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=321
+[S11a] t=320510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=322
+[S11a] t=321510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=323
+[S11a] t=322510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=324
+[S11a] t=323510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=325
+[S11a] t=324510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=326
+[S11a] t=325510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=327
+[S11a] t=326510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=328
+[S11a] t=327510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=329
+[S11a] t=328510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=330
+[S11a] t=329510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=331
+[S11a] t=330510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=332
+[S11a] t=331510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=333
+[S11a] t=332510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=334
+[S6a] #16 ch=101 rssi=-57 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 10 00 04 02 
+[S11a] t=333510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=335
+[S11a] t=334510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=336
+[S11a] t=335510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=337
+[S11a] t=336510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=338
+[S11a] t=337510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=339
+[S11a] t=338510ms vpack=12616mV vsys=12616mV i=+00038mA shunt=+380uV (CHG) raw s=0026 b=6292 c=0098
+[S1] tick=340
+[S11a] t=339510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=341
+[S11a] t=340510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=342
+[S11a] t=341510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=343
+[S11a] t=342510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=344
+[S11a] t=343510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=345
+[S11a] t=344510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=346
+[S11a] t=345510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=347
+[S11a] t=346510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=348
+[S11a] t=347510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=349
+[S11a] t=348510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=350
+[S11a] t=349510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=351
+[S6a] #17 ch=101 rssi=-59 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 11 00 04 02 
+[S11a] t=350510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=352
+[S11a] t=351510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=353
+[S11a] t=352510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=354
+[S11a] t=353510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=355
+[S11a] t=354510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=356
+[S11a] t=355510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=357
+[S11a] t=356510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=358
+[S11a] t=357510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=359
+[S11a] t=358510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=360
+[S11a] t=359510ms vpack=12616mV vsys=12616mV i=+00032mA shunt=+320uV (CHG) raw s=0020 b=6292 c=0080
+[S1] tick=361
+[S11a] t=360510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=362
+[S11a] t=361510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=363
+[S11a] t=362510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=364
+[S11a] t=363510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=365
+[S11a] t=364510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=366
+[S11a] t=365510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=367
+[S11a] t=366510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=368
+[S11a] t=367510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=369
+[S11a] t=368510ms vpack=12616mV vsys=12616mV i=+00038mA shunt=+380uV (CHG) raw s=0026 b=6292 c=0098
+[S1] tick=370
+[S11a] t=369510ms vpack=12612mV vsys=12612mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=628A c=00B0
+[S6a] #18 ch=101 rssi=-55 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 12 00 04 02 
+[S1] tick=371
+[S11a] t=370510ms vpack=12616mV vsys=12616mV i=+00012mA shunt=+120uV (CHG) raw s=000C b=6292 c=0030
+[S1] tick=372
+[S11a] t=371510ms vpack=12616mV vsys=12616mV i=+00038mA shunt=+380uV (CHG) raw s=0026 b=6292 c=0098
+[S1] tick=373
+[S11a] t=372510ms vpack=12612mV vsys=12612mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=628A c=00AC
+[S1] tick=374
+[S11a] t=373510ms vpack=12616mV vsys=12616mV i=+00010mA shunt=+100uV (CHG) raw s=000A b=6292 c=0028
+[S1] tick=375
+[S11a] t=374510ms vpack=12612mV vsys=12612mV i=+00032mA shunt=+320uV (CHG) raw s=0020 b=628A c=0080
+[S1] tick=376
+[S11a] t=375510ms vpack=12612mV vsys=12612mV i=+00037mA shunt=+370uV (CHG) raw s=0025 b=628A c=0094
+[S1] tick=377
+[S11a] t=376510ms vpack=12616mV vsys=12616mV i=+00013mA shunt=+130uV (CHG) raw s=000D b=6292 c=0034
+[S1] tick=378
+[S11a] t=377510ms vpack=12612mV vsys=12612mV i=+00023mA shunt=+230uV (CHG) raw s=0017 b=628A c=005C
+[S1] tick=379
+[S11a] t=378510ms vpack=12612mV vsys=12612mV i=+00039mA shunt=+390uV (CHG) raw s=0027 b=628A c=009C
+[S1] tick=380
+[S11a] t=379510ms vpack=12616mV vsys=12616mV i=+00018mA shunt=+180uV (CHG) raw s=0012 b=6292 c=0048
+[S1] tick=381
+[S11a] t=380510ms vpack=12616mV vsys=12616mV i=+00016mA shunt=+160uV (CHG) raw s=0010 b=6292 c=0040
+[S1] tick=382
+[S11a] t=381510ms vpack=12608mV vsys=12608mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6282 c=00B4
+[S1] tick=383
+[S11a] t=382510ms vpack=12616mV vsys=12616mV i=+00024mA shunt=+240uV (CHG) raw s=0018 b=6292 c=0060
+[S1] tick=384
+[S11a] t=383510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=385
+[S11a] t=384510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=386
+[S11a] t=385510ms vpack=12616mV vsys=12616mV i=+00029mA shunt=+290uV (CHG) raw s=001D b=6292 c=0074
+[S1] tick=387
+[S11a] t=386510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=388
+[S11a] t=387510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=389
+[S11a] t=388510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=390
+[S11a] t=389510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=391
+[S11a] t=390510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=392
+[S11a] t=391510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=393
+[S11a] t=392510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=394
+[S11a] t=393510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=395
+[S11a] t=394510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=396
+[S11a] t=395510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=397
+[S11a] t=396510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=398
+[S11a] t=397510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=399
+[S11a] t=398510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=400
+[S11a] t=399510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=401
+[S11a] t=400510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=402
+[S11a] t=401510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=403
+[S11a] t=402510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=404
+[S6a] #19 ch=101 rssi=-56 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 13 00 04 02 
+[S11a] t=403510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=405
+[S11a] t=404510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=406
+[S11a] t=405510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=407
+[S11a] t=406510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=408
+[S11a] t=407510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=409
+[S11a] t=408510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=410
+[S11a] t=409510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=411
+[S11a] t=410510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=412
+[S11a] t=411510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=413
+[S11a] t=412510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=414
+[S11a] t=413510ms vpack=12616mV vsys=12616mV i=+00030mA shunt=+300uV (CHG) raw s=001E b=6292 c=0078
+[S1] tick=415
+[S11a] t=414510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=416
+[S11a] t=415510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=417
+[S11a] t=416510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=418
+[S11a] t=417510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=419
+[S11a] t=418510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=420
+[S11a] t=419510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=421
+[S11a] t=420510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=422
+[S11a] t=421510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=423
+[S11a] t=422510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S6a] #20 ch=101 rssi=-58 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 14 00 04 02 
+[S1] tick=424
+[S11a] t=423510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=425
+[S11a] t=424510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=426
+[S11a] t=425510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=427
+[S11a] t=426510ms vpack=12616mV vsys=12616mV i=+00031mA shunt=+310uV (CHG) raw s=001F b=6292 c=007C
+[S1] tick=428
+[S11a] t=427510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=429
+[S11a] t=428510ms vpack=12616mV vsys=12616mV i=+00037mA shunt=+370uV (CHG) raw s=0025 b=6292 c=0094
+[S1] tick=430
+[S11a] t=429510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=431
+[S11a] t=430510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=432
+[S11a] t=431510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=433
+[S11a] t=432510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=434
+[S11a] t=433510ms vpack=12616mV vsys=12616mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=6292 c=00C0
+[S1] tick=435
+[S11a] t=434510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=436
+[S11a] t=435510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=437
+[S11a] t=436510ms vpack=12616mV vsys=12616mV i=+00042mA shunt=+420uV (CHG) raw s=002A b=6292 c=00A8
+[S1] tick=438
+[S11a] t=437510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=439
+[S11a] t=438510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=440
+[S11a] t=439510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=441
+[S11a] t=440510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=442
+[S11a] t=441510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=443
+[S11a] t=442510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=444
+[S11a] t=443510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=445
+[S11a] t=444510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=446
+[S11a] t=445510ms vpack=12616mV vsys=12616mV i=+00043mA shunt=+430uV (CHG) raw s=002B b=6292 c=00AC
+[S1] tick=447
+[S6a] #21 ch=101 rssi=-57 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 15 00 04 02 
+[S11a] t=446510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=448
+[S11a] t=447510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=449
+[S11a] t=448510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=450
+[S11a] t=449510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=451
+[S11a] t=450510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=452
+[S11a] t=451510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=453
+[S11a] t=452510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=454
+[S11a] t=453510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=455
+[S11a] t=454510ms vpack=12616mV vsys=12616mV i=+00038mA shunt=+380uV (CHG) raw s=0026 b=6292 c=0098
+[S1] tick=456
+[S11a] t=455510ms vpack=12616mV vsys=12616mV i=+00042mA shunt=+420uV (CHG) raw s=002A b=6292 c=00A8
+[S1] tick=457
+[S11a] t=456510ms vpack=12612mV vsys=12612mV i=+00037mA shunt=+370uV (CHG) raw s=0025 b=628A c=0094
+[S1] tick=458
+[S11a] t=457510ms vpack=12616mV vsys=12616mV i=+00019mA shunt=+190uV (CHG) raw s=0013 b=6292 c=004C
+[S1] tick=459
+[S11a] t=458510ms vpack=12608mV vsys=12608mV i=+00040mA shunt=+400uV (CHG) raw s=0028 b=6282 c=00A0
+[S1] tick=460
+[S11a] t=459510ms vpack=12612mV vsys=12612mV i=+00021mA shunt=+210uV (CHG) raw s=0015 b=628A c=0054
+[S1] tick=461
+[S11a] t=460510ms vpack=12616mV vsys=12616mV i=+00013mA shunt=+130uV (CHG) raw s=000D b=6292 c=0034
+[S1] tick=462
+[S11a] t=461510ms vpack=12612mV vsys=12612mV i=+00029mA shunt=+290uV (CHG) raw s=001D b=628A c=0074
+[S1] tick=463
+[S11a] t=462510ms vpack=12612mV vsys=12612mV i=+00028mA shunt=+280uV (CHG) raw s=001C b=628A c=0070
+[S1] tick=464
+[S11a] t=463510ms vpack=12616mV vsys=12616mV i=+00010mA shunt=+100uV (CHG) raw s=000A b=6292 c=0028
+[S6a] #22 ch=101 rssi=-67 crc=PASS len=9
+[S6a]   0000: 08 02 01 01 01 16 00 04 02 
+[S1] tick=465
+[S11a] t=464510ms vpack=12612mV vsys=12612mV i=+00048mA shunt=+480uV (CHG) raw s=0030 b=628A c=00C0
+[S1] tick=466
+[S11a] t=465510ms vpack=12612mV vsys=12612mV i=+00036mA shunt=+360uV (CHG) raw s=0024 b=628A c=0090
+[S1] tick=467
+[S11a] t=466510ms vpack=12616mV vsys=12616mV i=+00012mA shunt=+120uV (CHG) raw s=000C b=6292 c=0030
+[S1] tick=468
+[S11a] t=467510ms vpack=12612mV vsys=12612mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=628A c=00B8
+[S1] tick=469
+[S11a] t=468510ms vpack=12616mV vsys=12616mV i=+00040mA shunt=+400uV (CHG) raw s=0028 b=6292 c=00A0
+[S1] tick=470
+[S11a] t=469510ms vpack=12616mV vsys=12616mV i=+00016mA shunt=+160uV (CHG) raw s=0010 b=6292 c=0040
+[S1] tick=471
+[S11a] t=470510ms vpack=12616mV vsys=12616mV i=+00042mA shunt=+420uV (CHG) raw s=002A b=6292 c=00A8
+[S1] tick=472
+[S11a] t=471510ms vpack=12616mV vsys=12616mV i=+00044mA shunt=+440uV (CHG) raw s=002C b=6292 c=00B0
+[S1] tick=473
+[S11a] t=472510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=474
+[S11a] t=473510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=475
+[S11a] t=474510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=476
+[S11a] t=475510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=477
+[S11a] t=476510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=478
+[S11a] t=477510ms vpack=12620mV vsys=12620mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=629A c=00B8
+[S1] tick=479
+[S11a] t=478510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=480
+[S11a] t=479510ms vpack=12616mV vsys=12616mV i=+00042mA shunt=+420uV (CHG) raw s=002A b=6292 c=00A8
+[S1] tick=481
+[S11a] t=480510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=482
+[S11a] t=481510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=483
+[S11a] t=482510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=484
+[S11a] t=483510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=485
+[S11a] t=484510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=486
+[S11a] t=485510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=487
+[S11a] t=486510ms vpack=12616mV vsys=12616mV i=+00037mA shunt=+370uV (CHG) raw s=0025 b=6292 c=0094
+[S1] tick=488
+[S11a] t=487510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=489
+[S11a] t=488510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=490
+[S11a] t=489510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=491
+[S11a] t=490510ms vpack=12616mV vsys=12616mV i=+00045mA shunt=+450uV (CHG) raw s=002D b=6292 c=00B4
+[S1] tick=492
+[S11a] t=491510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=493
+[S11a] t=492510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=494
+[S11a] t=493510ms vpack=12616mV vsys=12616mV i=+00047mA shunt=+470uV (CHG) raw s=002F b=6292 c=00BC
+[S1] tick=495
+[S11a] t=494510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=496
+[S11a] t=495510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=497
+[S11a] t=496510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
+[S1] tick=498
+[S11a] t=497510ms vpack=12616mV vsys=12616mV i=+00046mA shunt=+460uV (CHG) raw s=002E b=6292 c=00B8
